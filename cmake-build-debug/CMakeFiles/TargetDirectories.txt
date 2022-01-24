@@ -1,0 +1,4 @@
+/mnt/nfs/homes/bpouchep/CLionProjects/so_long/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/nfs/homes/bpouchep/CLionProjects/so_long/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/nfs/homes/bpouchep/CLionProjects/so_long/cmake-build-debug/CMakeFiles/minilibx-linux.dir
+/mnt/nfs/homes/bpouchep/CLionProjects/so_long/cmake-build-debug/CMakeFiles/so_long.dir
