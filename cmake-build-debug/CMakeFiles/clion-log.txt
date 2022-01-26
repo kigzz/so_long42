@@ -1,4 +1,4 @@
-/app/extra/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/app/extra/clion/bin/ninja/linux/ninja -G Ninja /mnt/nfs/homes/bpouchep/CLionProjects/so_long
+/home/bpouchep/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/bpouchep/CLionProjects/so_long42
 -- Configuring done
 -- Generating done
--- Build files have been written to: /mnt/nfs/homes/bpouchep/CLionProjects/so_long/cmake-build-debug
+-- Build files have been written to: /home/bpouchep/CLionProjects/so_long42/cmake-build-debug

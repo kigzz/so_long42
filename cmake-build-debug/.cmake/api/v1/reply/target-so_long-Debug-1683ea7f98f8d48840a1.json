@@ -1,9 +1,8 @@
 {
-	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "libminilibx-linux.a"
+			"path" : "so_long"
 		}
 	],
 	"backtrace" : 1,
@@ -11,7 +10,8 @@
 	{
 		"commands" : 
 		[
-			"add_library"
+			"add_executable",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -25,7 +25,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
 				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 8,
 				"parent" : 0
 			}
 		]
@@ -40,6 +52,17 @@
 				},
 				{
 					"fragment" : "-std=gnu99"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/bpouchep/CLionProjects/so_long42/includes"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/bpouchep/CLionProjects/so_long42/mlx_linux"
 				}
 			],
 			"language" : "C",
@@ -57,9 +80,24 @@
 			]
 		}
 	],
-	"id" : "minilibx-linux::@6890427a1f51a3e7e1df",
-	"name" : "minilibx-linux",
-	"nameOnDisk" : "libminilibx-linux.a",
+	"id" : "so_long::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "so_long",
+	"nameOnDisk" : "so_long",
 	"paths" : 
 	{
 		"build" : ".",
@@ -80,9 +118,9 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.c",
+			"path" : "sources/so_long.c",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "STATIC_LIBRARY"
+	"type" : "EXECUTABLE"
 }

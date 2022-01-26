@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/so_long.dir/sources/so_long.c.o -o so_long 

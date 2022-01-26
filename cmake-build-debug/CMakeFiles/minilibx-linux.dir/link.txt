@@ -1,0 +1,2 @@
+/usr/bin/ar qc libminilibx-linux.a  CMakeFiles/minilibx-linux.dir/main.c.o
+/usr/bin/ranlib libminilibx-linux.a
