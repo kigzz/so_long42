@@ -3,7 +3,7 @@
 
 NAME			=	so_long
 CC				=	gcc
-FLAGS			=	-Wall -Wextra -Werror -Iincludes
+FLAGS			=	-Iincludes
 RM				=	rm -rf
 
 #FILES AND PATH
