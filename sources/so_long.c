@@ -126,7 +126,14 @@ t_img ft_new_sprite(void *mlx, char *path)
 	return (img);
 }
 
-
+int send_img(t_data *data, char *path)
+{
+	if (data->win_ptr == NULL)
+		return (1);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img.mlx_img,
+							200, 200);
+	return (0);
+}
 int	main(void)
 {
 	t_data	data;
@@ -142,20 +149,27 @@ int	main(void)
 		return (MLX_ERROR);
 	}
 
-	printf("Yolo\n");
-	data.img = ft_new_sprite(data.mlx_ptr, "block.xpm");
-	data.img_position.x = 0;
-	data.img_position.y = 0;
-	mlx_put_image_to_window(data.mlx_ptr, data.win_ptr, data.img.mlx_img, data.img_position.x, data.img_position.y);
+//	data.img.mlx_img = mlx_new_image(data.mlx_ptr, WINDOW_WIDTH, WINDOW_HEIGHT);
+//	data.img.addr = mlx_get_data_addr(data.img.mlx_img, &data.img.bpp, &data.img.line_len,
+//									  &data.img.endian);
+
+
+	data.img.mlx_img = mlx_xpm_file_to_image(data.mlx_ptr, "sources/block.xpm",
+											 &data.img.size.x, &data.img.size.y);
+
+	data.img.addr = mlx_get_data_addr(data.img.mlx_img, &data.img.bpp,
+									   &data.img.line_len, &data.img.endian);
+
+	mlx_loop_hook(data.mlx_ptr, &send_img, &data);
+	mlx_hook(data.win_ptr, KeyPress, KeyPressMask, &handle_keypress, &data);
+
+	mlx_loop(data.mlx_ptr);
 
 	/* Setup hooks */
 //	data.img.mlx_img = mlx_new_image(data.mlx_ptr, WINDOW_WIDTH, WINDOW_HEIGHT);
 
-	mlx_loop_hook(data.mlx_ptr, &render, &data);
-	mlx_hook(data.win_ptr, KeyPress, KeyPressMask, &handle_keypress, &data);
 //	mlx_hook(data.win_ptr, KeyRelease, KeyReleaseMask, &handle_keyrelease, &data); /* CHANGED */
 
-	mlx_loop(data.mlx_ptr);
 
 	/* we will exit the loop if there's no window left, and execute this code */
 
