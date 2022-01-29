@@ -42,5 +42,38 @@ int main(int argc, char **argv)
 				-> Capable d'ouvrir n'importe quelle map.
 		 */
 
+	char *map_path = ft_strdup("maps/");
+	char *open_map_path = ft_strjoin(map_path, argv[1]);
+	int fd = open(open_map_path, O_RDONLY);
+
+	char *tmp = NULL;
+	char *save_map = ft_strdup("");
+	char *read_map = ft_get_next_line(fd);
+
+	while (read_map != NULL)
+	{
+		tmp = ft_strjoin(save_map, read_map);
+		free(save_map);
+		save_map = tmp;
+		free(read_map);
+		read_map = ft_get_next_line(fd);
+	}
+	printf("save_map = %s\n", save_map);
+
+
+
+
+
+
+		/* Free */
+
+	free(save_map);
+	free(map_path);
+	free(open_map_path);
+
+
+
+
+
 	return (0);
 }
