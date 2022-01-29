@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/bpouchep/CLionProjects/so_long42/includes -I/home/bpouchep/CLionProjects/so_long42/mlx_linux
+C_INCLUDES = -I/home/bpouchep/CLionProjects/so_long42/includes -I/home/bpouchep/CLionProjects/so_long42/mlx_linux -I/home/bpouchep/CLionProjects/so_long42/libft
 
 C_FLAGS = -g -std=gnu99
 

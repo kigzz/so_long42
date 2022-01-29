@@ -3,41 +3,49 @@
 
 NAME			=	so_long
 CC				=	gcc
-FLAGS			=	-Iincludes
+FLAGS			=	-Wall -Wextra -Werror -Iincludes -Ilibft -Imlx_linux -O3
+# -g3 -fsanitize=address
 RM				=	rm -rf
+
+#LIB
+
+MLX				=	mlx_linux
+MLX_LINUX		=	-Lmlx_linux -lmlx -Imlx_linux -lXext -lX11
+LIBFT			=	-Llibft -lft
+
 
 #FILES AND PATH
 
 SRCS    		=	so_long.c
-SRCS_DIR		=	sources/
+SRCS_DIR		=	srcs/
 SRCS_PATH		=	$(addprefix $(SRCS_DIR), $(SRCS))
 OBJ_SRCS    	=	$(SRCS_PATH:%.c=%.o)
 
-#FUNCTIONS
 
-FUNC_SRCS		=
-FUNC_DIR		=	functions/
-FUNC 			=	$(addprefix $(FUNC_DIR), $(FUNC_SRCS))
-OBJ_F			=	$(FUNC:%.c=%.o)
-
-#COMMANDS
+all:				$(NAME)
 
 %.o : %.c
-					@$(CC) $(FLAGS) -Imlx_linux -O3 -c $< -o $@
-#-I/includes -Imlx_linux -O3
-all:				$(NAME)
-# -Lmlx_linux -llmlx_linux -Imlx_linux -1Xext -1X11 -1m -1z
-$(NAME):			$(OBJ_F) $(OBJ_SRCS)
-					@$(CC) $(FLAGS) $(OBJ_F) $(OBJ_SRCS) -Lmlx_linux -lmlx -Imlx_linux -lXext -lX11 -o $(NAME)
+					@$(CC) $(FLAGS) -c $< -o $@
+
+mlx_compil:
+					@make -C $(MLX);
+
+libft_compil:
+					@make -C libft
+
+$(NAME):			libft_compil mlx_compil $(OBJ_F) $(OBJ_SRCS)
+					@$(CC) $(FLAGS) $(OBJ_F) $(OBJ_SRCS) $(LIBFT) $(MLX_LINUX) -o $(NAME)
 					@echo "$(NAME) program created!"
 
 clean:
 					@$(RM) $(OBJ_SRCS)
-					@$(RM) $(OBJ_F)
-					@echo "object files deleted!"
+					@make clean -C libft
+					@make clean -C $(MLX)
+					@echo "object files/libs deleted!"
 
 fclean:				clean
 					@$(RM) $(NAME)
+					@make fclean -C libft
 					@echo "all deleted!"
 
 re:					fclean all

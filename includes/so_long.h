@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mlx.h>
+#include <libft.h>
 #include <X11/X.h>
 #include <X11/keysym.h>
 
