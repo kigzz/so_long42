@@ -14,8 +14,33 @@
 
 int main(int argc, char **argv)
 {
-	(void)argv;
-	if (argc > 2)
-		ft_putstr_fd("Error\n", 2);
+
+	// ERROR
+		// > 2 argc
+
+	if (argc != 2)
+	{
+		ft_putstr_fd("Error\nThis program only accept 2 arguments.", 2);
+		return (-1);
+	}
+
+		//	.ber extension
+
+	int lenght = ft_strlen(argv[1]);
+	if (ft_strnstr(argv[1], ".ber", lenght) == NULL)
+	{
+		ft_putstr_fd("Error\nWrong map file extension. Please use a file with \"ber\" extension.", 2);
+		return (-1);
+	}
+
+		/*	Parser la map.
+				-> Que 5 caractères possibles = 0 1 C E P
+					-> 1 seul P
+					-> Au moins 1 collectible (C) et au moins 1 sortie (E)
+					-> Autant de mur/obstacles si dans la map (1) / Sol (0)
+				-> La map doit être RECTANGULAIRE et fermer par des murs (1)
+				-> Capable d'ouvrir n'importe quelle map.
+		 */
+
 	return (0);
 }
