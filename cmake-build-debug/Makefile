@@ -129,6 +129,30 @@ so_long/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/build
 .PHONY : so_long/fast
 
+srcs/ft_free.o: srcs/ft_free.c.o
+.PHONY : srcs/ft_free.o
+
+# target to build an object file
+srcs/ft_free.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/ft_free.c.o
+.PHONY : srcs/ft_free.c.o
+
+srcs/ft_free.i: srcs/ft_free.c.i
+.PHONY : srcs/ft_free.i
+
+# target to preprocess a source file
+srcs/ft_free.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/ft_free.c.i
+.PHONY : srcs/ft_free.c.i
+
+srcs/ft_free.s: srcs/ft_free.c.s
+.PHONY : srcs/ft_free.s
+
+# target to generate assembly for a file
+srcs/ft_free.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/ft_free.c.s
+.PHONY : srcs/ft_free.c.s
+
 srcs/so_long.o: srcs/so_long.c.o
 .PHONY : srcs/so_long.o
 
@@ -153,30 +177,6 @@ srcs/so_long.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/so_long.c.s
 .PHONY : srcs/so_long.c.s
 
-srcs/so_long_test.o: srcs/so_long_test.c.o
-.PHONY : srcs/so_long_test.o
-
-# target to build an object file
-srcs/so_long_test.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/so_long_test.c.o
-.PHONY : srcs/so_long_test.c.o
-
-srcs/so_long_test.i: srcs/so_long_test.c.i
-.PHONY : srcs/so_long_test.i
-
-# target to preprocess a source file
-srcs/so_long_test.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/so_long_test.c.i
-.PHONY : srcs/so_long_test.c.i
-
-srcs/so_long_test.s: srcs/so_long_test.c.s
-.PHONY : srcs/so_long_test.s
-
-# target to generate assembly for a file
-srcs/so_long_test.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/so_long_test.c.s
-.PHONY : srcs/so_long_test.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... so_long"
+	@echo "... srcs/ft_free.o"
+	@echo "... srcs/ft_free.i"
+	@echo "... srcs/ft_free.s"
 	@echo "... srcs/so_long.o"
 	@echo "... srcs/so_long.i"
 	@echo "... srcs/so_long.s"
-	@echo "... srcs/so_long_test.o"
-	@echo "... srcs/so_long_test.i"
-	@echo "... srcs/so_long_test.s"
 .PHONY : help
 
 

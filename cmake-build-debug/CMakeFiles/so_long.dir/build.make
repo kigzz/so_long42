@@ -69,24 +69,10 @@ include CMakeFiles/so_long.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/so_long.dir/flags.make
 
-CMakeFiles/so_long.dir/srcs/so_long_test.c.o: CMakeFiles/so_long.dir/flags.make
-CMakeFiles/so_long.dir/srcs/so_long_test.c.o: ../srcs/so_long_test.c
-CMakeFiles/so_long.dir/srcs/so_long_test.c.o: CMakeFiles/so_long.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bpouchep/CLionProjects/so_long42/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/so_long.dir/srcs/so_long_test.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/so_long.dir/srcs/so_long_test.c.o -MF CMakeFiles/so_long.dir/srcs/so_long_test.c.o.d -o CMakeFiles/so_long.dir/srcs/so_long_test.c.o -c /home/bpouchep/CLionProjects/so_long42/srcs/so_long_test.c
-
-CMakeFiles/so_long.dir/srcs/so_long_test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/srcs/so_long_test.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bpouchep/CLionProjects/so_long42/srcs/so_long_test.c > CMakeFiles/so_long.dir/srcs/so_long_test.c.i
-
-CMakeFiles/so_long.dir/srcs/so_long_test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/srcs/so_long_test.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bpouchep/CLionProjects/so_long42/srcs/so_long_test.c -o CMakeFiles/so_long.dir/srcs/so_long_test.c.s
-
 CMakeFiles/so_long.dir/srcs/so_long.c.o: CMakeFiles/so_long.dir/flags.make
 CMakeFiles/so_long.dir/srcs/so_long.c.o: ../srcs/so_long.c
 CMakeFiles/so_long.dir/srcs/so_long.c.o: CMakeFiles/so_long.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bpouchep/CLionProjects/so_long42/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/so_long.dir/srcs/so_long.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bpouchep/CLionProjects/so_long42/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/so_long.dir/srcs/so_long.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/so_long.dir/srcs/so_long.c.o -MF CMakeFiles/so_long.dir/srcs/so_long.c.o.d -o CMakeFiles/so_long.dir/srcs/so_long.c.o -c /home/bpouchep/CLionProjects/so_long42/srcs/so_long.c
 
 CMakeFiles/so_long.dir/srcs/so_long.c.i: cmake_force
@@ -97,16 +83,30 @@ CMakeFiles/so_long.dir/srcs/so_long.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/srcs/so_long.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bpouchep/CLionProjects/so_long42/srcs/so_long.c -o CMakeFiles/so_long.dir/srcs/so_long.c.s
 
+CMakeFiles/so_long.dir/srcs/ft_free.c.o: CMakeFiles/so_long.dir/flags.make
+CMakeFiles/so_long.dir/srcs/ft_free.c.o: ../srcs/ft_free.c
+CMakeFiles/so_long.dir/srcs/ft_free.c.o: CMakeFiles/so_long.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bpouchep/CLionProjects/so_long42/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/so_long.dir/srcs/ft_free.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/so_long.dir/srcs/ft_free.c.o -MF CMakeFiles/so_long.dir/srcs/ft_free.c.o.d -o CMakeFiles/so_long.dir/srcs/ft_free.c.o -c /home/bpouchep/CLionProjects/so_long42/srcs/ft_free.c
+
+CMakeFiles/so_long.dir/srcs/ft_free.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/srcs/ft_free.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bpouchep/CLionProjects/so_long42/srcs/ft_free.c > CMakeFiles/so_long.dir/srcs/ft_free.c.i
+
+CMakeFiles/so_long.dir/srcs/ft_free.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/srcs/ft_free.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bpouchep/CLionProjects/so_long42/srcs/ft_free.c -o CMakeFiles/so_long.dir/srcs/ft_free.c.s
+
 # Object files for target so_long
 so_long_OBJECTS = \
-"CMakeFiles/so_long.dir/srcs/so_long_test.c.o" \
-"CMakeFiles/so_long.dir/srcs/so_long.c.o"
+"CMakeFiles/so_long.dir/srcs/so_long.c.o" \
+"CMakeFiles/so_long.dir/srcs/ft_free.c.o"
 
 # External object files for target so_long
 so_long_EXTERNAL_OBJECTS =
 
-so_long: CMakeFiles/so_long.dir/srcs/so_long_test.c.o
 so_long: CMakeFiles/so_long.dir/srcs/so_long.c.o
+so_long: CMakeFiles/so_long.dir/srcs/ft_free.c.o
 so_long: CMakeFiles/so_long.dir/build.make
 so_long: CMakeFiles/so_long.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bpouchep/CLionProjects/so_long42/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable so_long"

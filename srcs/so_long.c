@@ -15,7 +15,7 @@
 int main(int argc, char **argv)
 {
 
-	t_program game;
+//	t_program game;
 
 	// ERROR
 		// > 2 argc
@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 
 		//	.ber extension
 
-	int lenght = ft_strlen(argv[1]);
+	size_t lenght = ft_strlen(argv[1]);
 	if (ft_strnstr(argv[1], ".ber", lenght) == NULL)
 	{
 		ft_putstr_fd("Error Wrong map file extension. Please use a file with \"ber\" extension.\n", 2);
@@ -74,14 +74,67 @@ int main(int argc, char **argv)
 	}
 	printf("%s\n", save_map);
 
-		//
+	//	Split par '\n'
+
+	char **save_map_split = ft_split(save_map, '\n');
+
+	free(save_map);
+//	for (int i = 0; save_map_split[i] != NULL; i++)
+//		printf("%s\n", save_map_split[i]);
+	int i = -1;
+	int j;
+	size_t count_line = 0;
+	size_t length;
+	while (save_map_split[++i] != NULL)
+	{
+		count_line++;
+		length = ft_strlen(save_map_split[i]);
+		if (length != ft_strlen(save_map_split[i + 1]) && save_map_split[i + 1] != NULL)
+		{
+			printf("Error format map format\n");
+			free_split(save_map_split);
+			return (1);
+		}
+		else if (save_map_split[i][0] != '1' || save_map_split[i][length - 1] != '1')
+		{
+			printf("Map not closed by walls\n");
+			free_split(save_map_split);
+			return (1);
+		}
+		j = 0;
+		while (save_map_split[i][j] != '\0')
+		{
+			if (save_map_split[i][j] == 'P' || save_map_split[i][j] == '1' ||
+			save_map_split[i][j] == '0' || save_map_split[i][j] == 'C' ||
+			save_map_split[i][j] == 'E')
+			{
+				j++;
+			}
+			else
+			{
+				printf("Error map contains invalid characters\n");
+				free_split(save_map_split);
+				return (1);
+			}
+
+		}
+
+	}
+	printf("Count line = %ld\n", count_line);
+	if (ft_strlen(save_map_split[0]) == count_line)
+	{
+		printf("Error rectangle\n");
+		free_split(save_map_split);
+		return (1);
+	}
+
 
 
 
 
 		/* Free */
 
-	free(save_map);
+	free_split(save_map_split);
 
 	return (0);
 }

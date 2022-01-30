@@ -43,4 +43,15 @@ typedef struct s_program
 	t_vect	player_position;
 } t_program;
 
+
+
+
+
+
+
+
+/* Free */
+
+void	free_split(char **str);
+
 #endif

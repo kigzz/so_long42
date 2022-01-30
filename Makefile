@@ -4,6 +4,8 @@
 NAME			=	so_long
 CC				=	gcc
 FLAGS			=	-Wall -Wextra -Werror -Iincludes -Ilibft -Imlx_linux -O3
+#-g3 -fsanitize=address
+
 # -g3 -fsanitize=address
 RM				=	rm -rf
 
@@ -24,7 +26,7 @@ LIBFT_FLAGS		=	-Llibft -lft
 
 #FILES AND PATH
 
-SRCS    		=	so_long.c
+SRCS    		=	so_long.c ft_free.c
 SRCS_DIR		=	srcs/
 SRCS_PATH		=	$(addprefix $(SRCS_DIR), $(SRCS))
 OBJ_SRCS    	=	$(SRCS_PATH:%.c=%.o)

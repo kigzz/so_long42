@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/so_long.dir/srcs/ft_free.c.o"
+  "CMakeFiles/so_long.dir/srcs/ft_free.c.o.d"
   "CMakeFiles/so_long.dir/srcs/so_long.c.o"
   "CMakeFiles/so_long.dir/srcs/so_long.c.o.d"
-  "CMakeFiles/so_long.dir/srcs/so_long_test.c.o"
-  "CMakeFiles/so_long.dir/srcs/so_long_test.c.o.d"
   "so_long"
   "so_long.pdb"
 )
