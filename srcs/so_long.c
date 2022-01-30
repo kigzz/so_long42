@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	int lenght = ft_strlen(argv[1]);
 	if (ft_strnstr(argv[1], ".ber", lenght) == NULL)
 	{
-		ft_putstr_fd("Error\nWrong map file extension. Please use a file with \"ber\" extension.", 2);
+		ft_putstr_fd("Error Wrong map file extension. Please use a file with \"ber\" extension.\n", 2);
 		return (-1);
 	}
 
@@ -42,9 +42,19 @@ int main(int argc, char **argv)
 				-> Capable d'ouvrir n'importe quelle map.
 		 */
 
+
+		// Sauvegarder la map
+
 	char *map_path = ft_strdup("maps/");
 	char *open_map_path = ft_strjoin(map_path, argv[1]);
-	int fd = open(open_map_path, O_RDONLY);
+	int fd = open(open_map_path, O_RDWR);
+	if (fd == -1)
+	{
+		free(map_path);
+		free(open_map_path);
+		printf("Error open\n");
+		return (1);
+	}
 
 	char *tmp = NULL;
 	char *save_map = ft_strdup("");
@@ -58,9 +68,17 @@ int main(int argc, char **argv)
 		free(read_map);
 		read_map = ft_get_next_line(fd);
 	}
-	printf("save_map = %s\n", save_map);
+	if (*save_map == 0)
+	{
+		free(map_path);
+		free(open_map_path);
+		free(save_map);
+		printf("Error Empty Map\n");
+		return (1);
+	}
+	printf("%s\n", save_map);
 
-
+		//
 
 
 
