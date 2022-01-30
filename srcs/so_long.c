@@ -128,6 +128,12 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
+	/* Initialiser la structure t_objs
+	 * Vérifier s'il y a qu'un seul P, au moins 1 sortie E et 1 collectible.
+	 *
+	 *
+	 */
+
 
 
 
