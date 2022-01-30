@@ -15,6 +15,8 @@
 int main(int argc, char **argv)
 {
 
+	t_program game;
+
 	// ERROR
 		// > 2 argc
 
