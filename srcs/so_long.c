@@ -45,14 +45,10 @@ int main(int argc, char **argv)
 
 		// Sauvegarder la map
 
-	char *map_path = ft_strdup("maps/");
-	char *open_map_path = ft_strjoin(map_path, argv[1]);
-	int fd = open(open_map_path, O_RDWR);
+	int fd = open(argv[1], O_RDWR);
 	if (fd == -1)
 	{
-		free(map_path);
-		free(open_map_path);
-		printf("Error open\n");
+		printf("Error open. Please verify if the map exists.\n");
 		return (1);
 	}
 
@@ -70,8 +66,6 @@ int main(int argc, char **argv)
 	}
 	if (*save_map == 0)
 	{
-		free(map_path);
-		free(open_map_path);
 		free(save_map);
 		printf("Error Empty Map\n");
 		return (1);
@@ -86,12 +80,6 @@ int main(int argc, char **argv)
 		/* Free */
 
 	free(save_map);
-	free(map_path);
-	free(open_map_path);
-
-
-
-
 
 	return (0);
 }
