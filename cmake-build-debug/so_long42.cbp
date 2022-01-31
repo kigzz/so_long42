@@ -82,7 +82,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/check_extension.c">
+			<Option target="so_long"/>
+		</Unit>
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/ft_free.c">
+			<Option target="so_long"/>
+		</Unit>
+		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/init_structure.c">
 			<Option target="so_long"/>
 		</Unit>
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/so_long.c">

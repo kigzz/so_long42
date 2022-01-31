@@ -36,13 +36,17 @@ typedef struct s_img
 
 typedef struct s_program
 {
-	char 	*map;
+	char 	**map_save;
 	void	*mlx_ptr;
 	void	*window_ptr;
 	t_obj	objs;
 	t_vect	player_position;
 } t_program;
 
+/* Check */
+
+int	check_extension(char *str, const char* to_find);
+void	init_structure(t_program *game);
 
 
 

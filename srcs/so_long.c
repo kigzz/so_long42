@@ -12,10 +12,20 @@
 
 #include "so_long.h"
 
+void	printfstruct(t_program data)
+{
+	printf("Objs.exit = %d\n", data.objs.exit);
+	printf("Objs.player = %d\n", data.objs.player);
+	printf("Objs.collect = %d\n", data.objs.collectables);
+	printf("Player position X = %d\n", data.player_position.x);
+	printf("Player position Y = %d\n", data.player_position.y);
+}
+
+
 int main(int argc, char **argv)
 {
 
-//	t_program game;
+	t_program game;
 
 	// ERROR
 		// > 2 argc
@@ -28,10 +38,9 @@ int main(int argc, char **argv)
 
 		//	.ber extension
 
-	size_t lenght = ft_strlen(argv[1]);
-	if (ft_strnstr(argv[1], ".ber", lenght) == NULL)
+	if (check_extension(argv[1], ".ber") == 1)
 	{
-		ft_putstr_fd("Error Wrong map file extension. Please use a file with \"ber\" extension.\n", 2);
+		ft_putstr_fd("Error Wrong map file extension. Please use a file with \".ber\" extension.\n", 2);
 		return (-1);
 	}
 
@@ -47,7 +56,7 @@ int main(int argc, char **argv)
 
 		// Sauvegarder la map
 
-	int fd = open(argv[1], O_RDWR);
+	int fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
 		printf("Error open. Please verify if the map exists.\n");
@@ -57,7 +66,12 @@ int main(int argc, char **argv)
 	char *tmp = NULL;
 	char *save_map = ft_strdup("");
 	char *read_map = ft_get_next_line(fd);
-
+	if (read_map == NULL)
+	{
+		printf("Error open. Please verify if the map exists or map isn't empty.\n");
+		free(save_map);
+		return (1);
+	}
 	while (read_map != NULL)
 	{
 		tmp = ft_strjoin(save_map, read_map);
@@ -66,18 +80,12 @@ int main(int argc, char **argv)
 		free(read_map);
 		read_map = ft_get_next_line(fd);
 	}
-	if (*save_map == 0)
-	{
-		free(save_map);
-		printf("Error Empty Map\n");
-		return (1);
-	}
 	printf("%s\n", save_map);
 
 	//	Split par '\n'
 
-	char **save_map_split = ft_split(save_map, '\n');
-
+	game.map_save = ft_split(save_map, '\n');
+	close(fd);
 	free(save_map);
 //	for (int i = 0; save_map_split[i] != NULL; i++)
 //		printf("%s\n", save_map_split[i]);
@@ -85,46 +93,67 @@ int main(int argc, char **argv)
 	int j;
 	size_t count_line = 0;
 	size_t length;
-	while (save_map_split[++i] != NULL)
+	while (game.map_save[++i] != NULL)
 	{
 		count_line++;
-		length = ft_strlen(save_map_split[i]);
-		if (length != ft_strlen(save_map_split[i + 1]) && save_map_split[i + 1] != NULL)
+		length = ft_strlen(game.map_save[i]);
+		if (length != ft_strlen(game.map_save[i + 1]) && game.map_save[i + 1] != NULL)
 		{
 			printf("Error format map format\n");
-			free_split(save_map_split);
+			free_split(game.map_save);
 			return (1);
 		}
-		else if (save_map_split[i][0] != '1' || save_map_split[i][length - 1] != '1')
+		else if (game.map_save[i][0] != '1' || game.map_save[i][length - 1] != '1')
 		{
 			printf("Map not closed by walls\n");
-			free_split(save_map_split);
+			free_split(game.map_save);
 			return (1);
 		}
 		j = 0;
-		while (save_map_split[i][j] != '\0')
+		while (game.map_save[i][j] != '\0')
 		{
-			if (save_map_split[i][j] == 'P' || save_map_split[i][j] == '1' ||
-			save_map_split[i][j] == '0' || save_map_split[i][j] == 'C' ||
-			save_map_split[i][j] == 'E')
+			if (game.map_save[i][j] == 'P' || game.map_save[i][j] == '1' ||
+					game.map_save[i][j] == '0' || game.map_save[i][j] == 'C' ||
+					game.map_save[i][j] == 'E')
 			{
 				j++;
 			}
 			else
 			{
 				printf("Error map contains invalid characters\n");
-				free_split(save_map_split);
+				free_split(game.map_save);
 				return (1);
 			}
 
 		}
 
 	}
-	printf("Count line = %ld\n", count_line);
-	if (ft_strlen(save_map_split[0]) == count_line)
+	int k = 0;
+	while (game.map_save[0][k])
+	{
+		if (game.map_save[0][k] != '1')
+		{
+			printf("Error Map not closed by walls\n");
+			free(game.map_save);
+			return (1);
+		}
+		k++;
+	}
+	k = 0;
+	while (game.map_save[count_line - 1][k])
+	{
+		if (game.map_save[count_line - 1][k] != '1')
+		{
+			printf("Error Map not closed by walls\n");
+			free(game.map_save);
+			return (1);
+		}
+		k++;
+	}
+	if (ft_strlen(game.map_save[0]) == count_line)
 	{
 		printf("Error rectangle\n");
-		free_split(save_map_split);
+		free_split(game.map_save);
 		return (1);
 	}
 
@@ -134,13 +163,42 @@ int main(int argc, char **argv)
 	 *
 	 */
 
+	init_structure(&game);
+	i = -1;
+	while (game.map_save[++i]) {
+		j = -1;
+		while (game.map_save[i][++j])
+		{
+			if (game.map_save[i][j] == 'P')
+			{
+				game.player_position.x = i;
+				game.player_position.y = j;
+				game.objs.player += 1;
+			}
+			else if (game.map_save[i][j] == 'C')
+			{
+				game.objs.collectables += 1;
+			}
+			else if (game.map_save[i][j] == 'E')
+			{
+				game.objs.exit += 1;
+			}
+		}
+	}
+	if (game.objs.exit == 0 || game.objs.collectables == 0 || game.objs.player != 1)
+	{
+		free_split(game.map_save);
+		printf("Error Parameters in map are not valid.\n");
+		return (1);
+	}
+	printfstruct(game);
 
 
 
 
 		/* Free */
 
-	free_split(save_map_split);
+	free_split(game.map_save);
 
 	return (0);
 }

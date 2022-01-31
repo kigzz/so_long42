@@ -129,6 +129,30 @@ so_long/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/build
 .PHONY : so_long/fast
 
+srcs/check_extension.o: srcs/check_extension.c.o
+.PHONY : srcs/check_extension.o
+
+# target to build an object file
+srcs/check_extension.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/check_extension.c.o
+.PHONY : srcs/check_extension.c.o
+
+srcs/check_extension.i: srcs/check_extension.c.i
+.PHONY : srcs/check_extension.i
+
+# target to preprocess a source file
+srcs/check_extension.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/check_extension.c.i
+.PHONY : srcs/check_extension.c.i
+
+srcs/check_extension.s: srcs/check_extension.c.s
+.PHONY : srcs/check_extension.s
+
+# target to generate assembly for a file
+srcs/check_extension.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/check_extension.c.s
+.PHONY : srcs/check_extension.c.s
+
 srcs/ft_free.o: srcs/ft_free.c.o
 .PHONY : srcs/ft_free.o
 
@@ -152,6 +176,30 @@ srcs/ft_free.s: srcs/ft_free.c.s
 srcs/ft_free.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/ft_free.c.s
 .PHONY : srcs/ft_free.c.s
+
+srcs/init_structure.o: srcs/init_structure.c.o
+.PHONY : srcs/init_structure.o
+
+# target to build an object file
+srcs/init_structure.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/init_structure.c.o
+.PHONY : srcs/init_structure.c.o
+
+srcs/init_structure.i: srcs/init_structure.c.i
+.PHONY : srcs/init_structure.i
+
+# target to preprocess a source file
+srcs/init_structure.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/init_structure.c.i
+.PHONY : srcs/init_structure.c.i
+
+srcs/init_structure.s: srcs/init_structure.c.s
+.PHONY : srcs/init_structure.s
+
+# target to generate assembly for a file
+srcs/init_structure.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/init_structure.c.s
+.PHONY : srcs/init_structure.c.s
 
 srcs/so_long.o: srcs/so_long.c.o
 .PHONY : srcs/so_long.o
@@ -186,9 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... so_long"
+	@echo "... srcs/check_extension.o"
+	@echo "... srcs/check_extension.i"
+	@echo "... srcs/check_extension.s"
 	@echo "... srcs/ft_free.o"
 	@echo "... srcs/ft_free.i"
 	@echo "... srcs/ft_free.s"
+	@echo "... srcs/init_structure.o"
+	@echo "... srcs/init_structure.i"
+	@echo "... srcs/init_structure.s"
 	@echo "... srcs/so_long.o"
 	@echo "... srcs/so_long.i"
 	@echo "... srcs/so_long.s"
