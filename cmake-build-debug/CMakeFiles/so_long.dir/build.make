@@ -139,13 +139,58 @@ CMakeFiles/so_long.dir/srcs/close_window.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/srcs/close_window.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bpouchep/CLionProjects/so_long42/srcs/close_window.c -o CMakeFiles/so_long.dir/srcs/close_window.c.s
 
+CMakeFiles/so_long.dir/srcs/open_image.c.o: CMakeFiles/so_long.dir/flags.make
+CMakeFiles/so_long.dir/srcs/open_image.c.o: ../srcs/open_image.c
+CMakeFiles/so_long.dir/srcs/open_image.c.o: CMakeFiles/so_long.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bpouchep/CLionProjects/so_long42/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/so_long.dir/srcs/open_image.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/so_long.dir/srcs/open_image.c.o -MF CMakeFiles/so_long.dir/srcs/open_image.c.o.d -o CMakeFiles/so_long.dir/srcs/open_image.c.o -c /home/bpouchep/CLionProjects/so_long42/srcs/open_image.c
+
+CMakeFiles/so_long.dir/srcs/open_image.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/srcs/open_image.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bpouchep/CLionProjects/so_long42/srcs/open_image.c > CMakeFiles/so_long.dir/srcs/open_image.c.i
+
+CMakeFiles/so_long.dir/srcs/open_image.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/srcs/open_image.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bpouchep/CLionProjects/so_long42/srcs/open_image.c -o CMakeFiles/so_long.dir/srcs/open_image.c.s
+
+CMakeFiles/so_long.dir/srcs/store_map.c.o: CMakeFiles/so_long.dir/flags.make
+CMakeFiles/so_long.dir/srcs/store_map.c.o: ../srcs/store_map.c
+CMakeFiles/so_long.dir/srcs/store_map.c.o: CMakeFiles/so_long.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bpouchep/CLionProjects/so_long42/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/so_long.dir/srcs/store_map.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/so_long.dir/srcs/store_map.c.o -MF CMakeFiles/so_long.dir/srcs/store_map.c.o.d -o CMakeFiles/so_long.dir/srcs/store_map.c.o -c /home/bpouchep/CLionProjects/so_long42/srcs/store_map.c
+
+CMakeFiles/so_long.dir/srcs/store_map.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/srcs/store_map.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bpouchep/CLionProjects/so_long42/srcs/store_map.c > CMakeFiles/so_long.dir/srcs/store_map.c.i
+
+CMakeFiles/so_long.dir/srcs/store_map.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/srcs/store_map.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bpouchep/CLionProjects/so_long42/srcs/store_map.c -o CMakeFiles/so_long.dir/srcs/store_map.c.s
+
+CMakeFiles/so_long.dir/srcs/check_map.c.o: CMakeFiles/so_long.dir/flags.make
+CMakeFiles/so_long.dir/srcs/check_map.c.o: ../srcs/check_map.c
+CMakeFiles/so_long.dir/srcs/check_map.c.o: CMakeFiles/so_long.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bpouchep/CLionProjects/so_long42/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/so_long.dir/srcs/check_map.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/so_long.dir/srcs/check_map.c.o -MF CMakeFiles/so_long.dir/srcs/check_map.c.o.d -o CMakeFiles/so_long.dir/srcs/check_map.c.o -c /home/bpouchep/CLionProjects/so_long42/srcs/check_map.c
+
+CMakeFiles/so_long.dir/srcs/check_map.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/srcs/check_map.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bpouchep/CLionProjects/so_long42/srcs/check_map.c > CMakeFiles/so_long.dir/srcs/check_map.c.i
+
+CMakeFiles/so_long.dir/srcs/check_map.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/srcs/check_map.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bpouchep/CLionProjects/so_long42/srcs/check_map.c -o CMakeFiles/so_long.dir/srcs/check_map.c.s
+
 # Object files for target so_long
 so_long_OBJECTS = \
 "CMakeFiles/so_long.dir/srcs/so_long.c.o" \
 "CMakeFiles/so_long.dir/srcs/ft_free.c.o" \
 "CMakeFiles/so_long.dir/srcs/check_extension.c.o" \
 "CMakeFiles/so_long.dir/srcs/init_structure.c.o" \
-"CMakeFiles/so_long.dir/srcs/close_window.c.o"
+"CMakeFiles/so_long.dir/srcs/close_window.c.o" \
+"CMakeFiles/so_long.dir/srcs/open_image.c.o" \
+"CMakeFiles/so_long.dir/srcs/store_map.c.o" \
+"CMakeFiles/so_long.dir/srcs/check_map.c.o"
 
 # External object files for target so_long
 so_long_EXTERNAL_OBJECTS =
@@ -155,9 +200,12 @@ so_long: CMakeFiles/so_long.dir/srcs/ft_free.c.o
 so_long: CMakeFiles/so_long.dir/srcs/check_extension.c.o
 so_long: CMakeFiles/so_long.dir/srcs/init_structure.c.o
 so_long: CMakeFiles/so_long.dir/srcs/close_window.c.o
+so_long: CMakeFiles/so_long.dir/srcs/open_image.c.o
+so_long: CMakeFiles/so_long.dir/srcs/store_map.c.o
+so_long: CMakeFiles/so_long.dir/srcs/check_map.c.o
 so_long: CMakeFiles/so_long.dir/build.make
 so_long: CMakeFiles/so_long.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bpouchep/CLionProjects/so_long42/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable so_long"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bpouchep/CLionProjects/so_long42/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable so_long"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/so_long.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

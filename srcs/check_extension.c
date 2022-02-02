@@ -12,20 +12,18 @@
 
 #include "so_long.h"
 
-int	check_extension(char *str, const char* to_find)
+int	check_extension(char *str, const char *to_find)
 {
 	size_t	i;
 	size_t	j;
 	int		size_find;
 
-	if (!str || !to_find)
+	if (!str || !to_find || *to_find == '\0')
 		return (0);
 	i = ft_strlen(str) - 4;
 	size_find = 0;
 	while (to_find[size_find] != '\0')
 		size_find++;
-	if (size_find == 0)
-		return (0);
 	while (str[i] != '\0')
 	{
 		j = 0;

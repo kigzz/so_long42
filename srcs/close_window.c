@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   close_window.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpouchep <bpouchep@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/02 23:13:52 by bpouchep          #+#    #+#             */
+/*   Updated: 2022/02/02 23:13:53 by bpouchep         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
-static void	map_draw(t_program *game)
+void	map_draw(t_program *game)
 {
 	int i;
 	int j;
@@ -30,7 +42,7 @@ static void	map_draw(t_program *game)
 	}
 }
 
-int	close_esc(int keysym, t_program *game)
+int	key_pressed(int keysym, t_program *game)
 {
 	if (keysym == KEY_ESC)
 	{

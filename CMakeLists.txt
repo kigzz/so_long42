@@ -3,7 +3,7 @@ project(so_long42 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(so_long srcs/so_long.c srcs/ft_free.c srcs/check_extension.c srcs/init_structure.c srcs/close_window.c)
+add_executable(so_long srcs/so_long.c srcs/ft_free.c srcs/check_extension.c srcs/init_structure.c srcs/close_window.c srcs/open_image.c srcs/store_map.c srcs/check_map.c)
 include_directories(includes/)
 include_directories(mlx_linux/)
 include_directories(libft/)

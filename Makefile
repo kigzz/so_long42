@@ -26,7 +26,8 @@ LIBFT_FLAGS		=	-Llibft -lft
 
 #FILES AND PATH
 
-SRCS    		=	so_long.c ft_free.c check_extension.c init_structure.c close_window.c
+SRCS    		=	so_long.c ft_free.c check_extension.c init_structure.c close_window.c open_image.c store_map.c \
+					check_map.c
 
 SRCS_DIR		=	srcs/
 SRCS_PATH		=	$(addprefix $(SRCS_DIR), $(SRCS))
@@ -42,7 +43,7 @@ all:				$(NAME)
 
 $(NAME):			$(OBJ_SRCS)
 					@make -C $(LIBFT_DIR)
-#					@make -C $(MLX_DIR)
+					@#make -C $(MLX_DIR)
 					@$(CC) $(FLAGS) $(OBJ_SRCS) $(LIBFT_FLAGS) $(MLX_LINUX_FLAGS) -o $(NAME)
 
 
@@ -51,7 +52,7 @@ $(NAME):			$(OBJ_SRCS)
 clean:
 					@$(RM) $(OBJ_SRCS)
 					@make clean -C $(LIBFT_DIR)
-#					@make clean -C $(MLX)
+					@#make clean -C $(MLX)
 
 fclean:				clean
 					@$(RM) $(NAME)

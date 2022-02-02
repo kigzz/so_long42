@@ -153,6 +153,30 @@ srcs/check_extension.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/check_extension.c.s
 .PHONY : srcs/check_extension.c.s
 
+srcs/check_map.o: srcs/check_map.c.o
+.PHONY : srcs/check_map.o
+
+# target to build an object file
+srcs/check_map.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/check_map.c.o
+.PHONY : srcs/check_map.c.o
+
+srcs/check_map.i: srcs/check_map.c.i
+.PHONY : srcs/check_map.i
+
+# target to preprocess a source file
+srcs/check_map.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/check_map.c.i
+.PHONY : srcs/check_map.c.i
+
+srcs/check_map.s: srcs/check_map.c.s
+.PHONY : srcs/check_map.s
+
+# target to generate assembly for a file
+srcs/check_map.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/check_map.c.s
+.PHONY : srcs/check_map.c.s
+
 srcs/close_window.o: srcs/close_window.c.o
 .PHONY : srcs/close_window.o
 
@@ -225,6 +249,30 @@ srcs/init_structure.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/init_structure.c.s
 .PHONY : srcs/init_structure.c.s
 
+srcs/open_image.o: srcs/open_image.c.o
+.PHONY : srcs/open_image.o
+
+# target to build an object file
+srcs/open_image.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/open_image.c.o
+.PHONY : srcs/open_image.c.o
+
+srcs/open_image.i: srcs/open_image.c.i
+.PHONY : srcs/open_image.i
+
+# target to preprocess a source file
+srcs/open_image.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/open_image.c.i
+.PHONY : srcs/open_image.c.i
+
+srcs/open_image.s: srcs/open_image.c.s
+.PHONY : srcs/open_image.s
+
+# target to generate assembly for a file
+srcs/open_image.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/open_image.c.s
+.PHONY : srcs/open_image.c.s
+
 srcs/so_long.o: srcs/so_long.c.o
 .PHONY : srcs/so_long.o
 
@@ -249,6 +297,30 @@ srcs/so_long.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/so_long.c.s
 .PHONY : srcs/so_long.c.s
 
+srcs/store_map.o: srcs/store_map.c.o
+.PHONY : srcs/store_map.o
+
+# target to build an object file
+srcs/store_map.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/store_map.c.o
+.PHONY : srcs/store_map.c.o
+
+srcs/store_map.i: srcs/store_map.c.i
+.PHONY : srcs/store_map.i
+
+# target to preprocess a source file
+srcs/store_map.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/store_map.c.i
+.PHONY : srcs/store_map.c.i
+
+srcs/store_map.s: srcs/store_map.c.s
+.PHONY : srcs/store_map.s
+
+# target to generate assembly for a file
+srcs/store_map.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/store_map.c.s
+.PHONY : srcs/store_map.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -261,6 +333,9 @@ help:
 	@echo "... srcs/check_extension.o"
 	@echo "... srcs/check_extension.i"
 	@echo "... srcs/check_extension.s"
+	@echo "... srcs/check_map.o"
+	@echo "... srcs/check_map.i"
+	@echo "... srcs/check_map.s"
 	@echo "... srcs/close_window.o"
 	@echo "... srcs/close_window.i"
 	@echo "... srcs/close_window.s"
@@ -270,9 +345,15 @@ help:
 	@echo "... srcs/init_structure.o"
 	@echo "... srcs/init_structure.i"
 	@echo "... srcs/init_structure.s"
+	@echo "... srcs/open_image.o"
+	@echo "... srcs/open_image.i"
+	@echo "... srcs/open_image.s"
 	@echo "... srcs/so_long.o"
 	@echo "... srcs/so_long.i"
 	@echo "... srcs/so_long.s"
+	@echo "... srcs/store_map.o"
+	@echo "... srcs/store_map.i"
+	@echo "... srcs/store_map.s"
 .PHONY : help
 
 
