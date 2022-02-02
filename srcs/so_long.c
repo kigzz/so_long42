@@ -21,7 +21,6 @@ void	printfstruct(t_program data)
 	printf("Player position Y = %d\n", data.player_position.y);
 }
 
-
 int main(int argc, char **argv)
 {
 
@@ -202,6 +201,10 @@ int main(int argc, char **argv)
 	int window_width = ft_strlen(game.map_save[0]) * IMG_PIX;
 	printf("window width = %d\n", window_width);
 	game.window = mlx_new_window(game.mlx_ptr, window_width, window_height, "SoLong");
+
+
+		/* IMAGES */
+
 	game.img_walls = mlx_xpm_file_to_image(game.mlx_ptr, "images/1.xpm", &game.img_w,
 										   &game.img_h);
 	game.img_collectables = mlx_xpm_file_to_image(game.mlx_ptr, "images/C.xpm", &game.img_w,
@@ -213,49 +216,6 @@ int main(int argc, char **argv)
 	game.img_player = mlx_xpm_file_to_image(game.mlx_ptr, "images/PD.xpm", &game.img_w,
 											&game.img_h);
 
-
-
-
-
-
-
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 200, 200);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, 0);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, 64);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, 128);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, 192);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, 256);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, IMG_PIX * 5);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, IMG_PIX * 6);
-//
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 0, 0);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 1, 0);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 2, 0);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 3, 0);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 4, 0);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 5, 0);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 6, 0);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 7, 0);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 8, 0);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, 0);
-//
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 1);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 2);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 3);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 4);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 5);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 6);
-//
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 1, IMG_PIX * 6);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 2, IMG_PIX * 6);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 3, IMG_PIX * 6);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 4, IMG_PIX * 6);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 5, IMG_PIX * 6);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 6, IMG_PIX * 6);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 7, IMG_PIX * 6);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 8, IMG_PIX * 6);
-//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 6);
-
 	i = -1;
 	while (game.map_save[++i])
 	{
@@ -266,30 +226,27 @@ int main(int argc, char **argv)
 				mlx_put_image_to_window(game.mlx_ptr, game.window, game.img_walls, j * IMG_PIX,
 										i * IMG_PIX);
 			else if (game.map_save[i][j] == 'P')
-			{
 				mlx_put_image_to_window(game.mlx_ptr, game.window, game.img_player, j * IMG_PIX,
 										i * IMG_PIX);
-			}
 			else if (game.map_save[i][j] == 'C')
-			{
 				mlx_put_image_to_window(game.mlx_ptr, game.window, game.img_collectables, j * IMG_PIX,
 										i * IMG_PIX);
-			}
 			else if (game.map_save[i][j] == '0')
-			{
 				mlx_put_image_to_window(game.mlx_ptr, game.window, game.img_ground, j * IMG_PIX,
 										i * IMG_PIX);
-			}
 			else if (game.map_save[i][j] == 'E')
-			{
 				mlx_put_image_to_window(game.mlx_ptr, game.window, game.img_exit, j * IMG_PIX,
 										i * IMG_PIX);
-			}
 			j++;
 		}
 	}
 
-	/* Hook */
+
+	/* Hook Player */
+
+
+
+		/* Hook close */
 
 	mlx_hook(game.window, DestroyNotify, LeaveWindowMask, &close_redcross, &game);
 	mlx_hook(game.window, KeyPress, KeyPressMask, &close_esc, &game);

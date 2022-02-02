@@ -45,8 +45,6 @@ typedef struct s_data
 int	handle_keyrelease(int keysym)
 {
 	printf("Keyrelease: %d\n", keysym);
-	if (keysym == XK_0)
-		printf("Salope\n");
 	return (0);
 }
 

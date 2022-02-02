@@ -20,7 +20,7 @@ int	check_extension(char *str, const char* to_find)
 
 	if (!str || !to_find)
 		return (0);
-	i = ft_strlen(str) - 5;
+	i = ft_strlen(str) - 4;
 	size_find = 0;
 	while (to_find[size_find] != '\0')
 		size_find++;
