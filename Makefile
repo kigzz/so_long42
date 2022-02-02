@@ -26,7 +26,7 @@ LIBFT_FLAGS		=	-Llibft -lft
 
 #FILES AND PATH
 
-SRCS    		=	so_long.c ft_free.c check_extension.c init_structure.c
+SRCS    		=	so_long.c ft_free.c check_extension.c init_structure.c close_window.c
 
 SRCS_DIR		=	srcs/
 SRCS_PATH		=	$(addprefix $(SRCS_DIR), $(SRCS))

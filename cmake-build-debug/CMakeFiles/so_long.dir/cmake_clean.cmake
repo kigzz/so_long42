@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/so_long.dir/srcs/check_extension.c.o"
   "CMakeFiles/so_long.dir/srcs/check_extension.c.o.d"
+  "CMakeFiles/so_long.dir/srcs/close_window.c.o"
+  "CMakeFiles/so_long.dir/srcs/close_window.c.o.d"
   "CMakeFiles/so_long.dir/srcs/ft_free.c.o"
   "CMakeFiles/so_long.dir/srcs/ft_free.c.o.d"
   "CMakeFiles/so_long.dir/srcs/init_structure.c.o"

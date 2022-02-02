@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 	if (argc != 2)
 	{
 		ft_putstr_fd("Error\nThis program only accept 2 arguments.", 2);
-		return (-1);
+		return (1);
 	}
 
 		//	.ber extension
@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 	if (check_extension(argv[1], ".ber") == 1)
 	{
 		ft_putstr_fd("Error Wrong map file extension. Please use a file with \".ber\" extension.\n", 2);
-		return (-1);
+		return (1);
 	}
 
 		/*	Parser la map.
@@ -80,7 +80,6 @@ int main(int argc, char **argv)
 		free(read_map);
 		read_map = ft_get_next_line(fd);
 	}
-	printf("%s\n", save_map);
 
 	//	Split par '\n'
 
@@ -162,7 +161,8 @@ int main(int argc, char **argv)
 	 *
 	 *
 	 */
-
+	for (i = 0; game.map_save[i]; i++)
+		printf("%s\n", game.map_save[i]);
 	init_structure(&game);
 	i = -1;
 	while (game.map_save[++i]) {
@@ -193,12 +193,117 @@ int main(int argc, char **argv)
 	}
 	printfstruct(game);
 
+	game.mlx_ptr = mlx_init();
+	if (!game.mlx_ptr)
+		return (1);
+	printf("countline = %ld\n", count_line);
+	int window_height = count_line * IMG_PIX;
+	printf("window height = %d\n", window_height);
+	int window_width = ft_strlen(game.map_save[0]) * IMG_PIX;
+	printf("window width = %d\n", window_width);
+	game.window = mlx_new_window(game.mlx_ptr, window_width, window_height, "SoLong");
+	game.img_walls = mlx_xpm_file_to_image(game.mlx_ptr, "images/1.xpm", &game.img_w,
+										   &game.img_h);
+	game.img_collectables = mlx_xpm_file_to_image(game.mlx_ptr, "images/C.xpm", &game.img_w,
+												  &game.img_h);
+	game.img_exit = mlx_xpm_file_to_image(game.mlx_ptr, "images/E1.xpm", &game.img_w,
+												  &game.img_h);
+	game.img_ground = mlx_xpm_file_to_image(game.mlx_ptr, "images/0.xpm", &game.img_w,
+												  &game.img_h);
+	game.img_player = mlx_xpm_file_to_image(game.mlx_ptr, "images/PD.xpm", &game.img_w,
+											&game.img_h);
 
 
 
-		/* Free */
+
+
+
+
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 200, 200);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, 0);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, 64);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, 128);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, 192);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, 256);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, IMG_PIX * 5);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, 0, IMG_PIX * 6);
+//
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 0, 0);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 1, 0);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 2, 0);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 3, 0);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 4, 0);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 5, 0);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 6, 0);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 7, 0);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 8, 0);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, 0);
+//
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 1);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 2);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 3);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 4);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 5);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 6);
+//
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 1, IMG_PIX * 6);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 2, IMG_PIX * 6);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 3, IMG_PIX * 6);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 4, IMG_PIX * 6);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 5, IMG_PIX * 6);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 6, IMG_PIX * 6);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 7, IMG_PIX * 6);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 8, IMG_PIX * 6);
+//	mlx_put_image_to_window(game.mlx_ptr, game.window, game.walls.img, IMG_PIX * 9, IMG_PIX * 6);
+
+	i = -1;
+	while (game.map_save[++i])
+	{
+		j = 0;
+		while (game.map_save[i][j] != '\0')
+		{
+			if (game.map_save[i][j] == '1')
+				mlx_put_image_to_window(game.mlx_ptr, game.window, game.img_walls, j * IMG_PIX,
+										i * IMG_PIX);
+			else if (game.map_save[i][j] == 'P')
+			{
+				mlx_put_image_to_window(game.mlx_ptr, game.window, game.img_player, j * IMG_PIX,
+										i * IMG_PIX);
+			}
+			else if (game.map_save[i][j] == 'C')
+			{
+				mlx_put_image_to_window(game.mlx_ptr, game.window, game.img_collectables, j * IMG_PIX,
+										i * IMG_PIX);
+			}
+			else if (game.map_save[i][j] == '0')
+			{
+				mlx_put_image_to_window(game.mlx_ptr, game.window, game.img_ground, j * IMG_PIX,
+										i * IMG_PIX);
+			}
+			else if (game.map_save[i][j] == 'E')
+			{
+				mlx_put_image_to_window(game.mlx_ptr, game.window, game.img_exit, j * IMG_PIX,
+										i * IMG_PIX);
+			}
+			j++;
+		}
+	}
+
+	/* Hook */
+
+	mlx_hook(game.window, DestroyNotify, LeaveWindowMask, &close_redcross, &game);
+	mlx_hook(game.window, KeyPress, KeyPressMask, &close_esc, &game);
+	mlx_loop(game.mlx_ptr);
+
+	/* Free */
 
 	free_split(game.map_save);
-
+	mlx_destroy_image(game.mlx_ptr, game.img_walls);
+	mlx_destroy_image(game.mlx_ptr, game.img_ground);
+	mlx_destroy_image(game.mlx_ptr, game.img_collectables);
+	mlx_destroy_image(game.mlx_ptr, game.img_exit);
+	mlx_destroy_image(game.mlx_ptr, game.img_player);
+	mlx_destroy_display(game.mlx_ptr);
+	free(game.mlx_ptr);
 	return (0);
 }

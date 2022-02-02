@@ -10,6 +10,8 @@
 #include <X11/X.h>
 #include <X11/keysym.h>
 
+#define IMG_PIX 32
+
 typedef struct s_vect
 {
 	int x;
@@ -25,20 +27,18 @@ typedef struct s_objects
 	int ground;
 } t_obj;
 
-typedef struct s_img
-{
-	void	*img;
-	char 	*addr;
-	int 	bpp;
-	int 	len;
-	int 	endian;
-} t_img;
-
 typedef struct s_program
 {
 	char 	**map_save;
 	void	*mlx_ptr;
-	void	*window_ptr;
+	void	*window;
+	void	*img_walls;
+	void	*img_player;
+	void	*img_exit;
+	void	*img_collectables;
+	void	*img_ground;
+	int 	img_w;
+	int 	img_h;
 	t_obj	objs;
 	t_vect	player_position;
 } t_program;
@@ -50,7 +50,10 @@ void	init_structure(t_program *game);
 
 
 
+/* Close */
 
+int	close_esc(int keysym, t_program *data);
+int	close_redcross(t_program *data);
 
 
 

@@ -153,6 +153,30 @@ srcs/check_extension.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/check_extension.c.s
 .PHONY : srcs/check_extension.c.s
 
+srcs/close_window.o: srcs/close_window.c.o
+.PHONY : srcs/close_window.o
+
+# target to build an object file
+srcs/close_window.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/close_window.c.o
+.PHONY : srcs/close_window.c.o
+
+srcs/close_window.i: srcs/close_window.c.i
+.PHONY : srcs/close_window.i
+
+# target to preprocess a source file
+srcs/close_window.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/close_window.c.i
+.PHONY : srcs/close_window.c.i
+
+srcs/close_window.s: srcs/close_window.c.s
+.PHONY : srcs/close_window.s
+
+# target to generate assembly for a file
+srcs/close_window.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/close_window.c.s
+.PHONY : srcs/close_window.c.s
+
 srcs/ft_free.o: srcs/ft_free.c.o
 .PHONY : srcs/ft_free.o
 
@@ -237,6 +261,9 @@ help:
 	@echo "... srcs/check_extension.o"
 	@echo "... srcs/check_extension.i"
 	@echo "... srcs/check_extension.s"
+	@echo "... srcs/close_window.o"
+	@echo "... srcs/close_window.i"
+	@echo "... srcs/close_window.s"
 	@echo "... srcs/ft_free.o"
 	@echo "... srcs/ft_free.i"
 	@echo "... srcs/ft_free.s"
