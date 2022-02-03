@@ -46,7 +46,7 @@ typedef struct s_objects
 typedef struct s_program
 {
 	char 	**map_save;
-	int 	map_height;
+	size_t	map_height;
 	void	*mlx_ptr;
 	void	*window;
 	void	*img_walls;
@@ -68,7 +68,8 @@ void	init_structure(t_program *game);
 void	open_image(t_program *game);
 char	**store_map(t_program *game, int fd);
 int	check_walls(t_program game);
-
+int check_rectangular(t_program game);
+int	check_parameters(t_program game);
 
 /* Game */
 

@@ -17,11 +17,11 @@ void	open_image(t_program *game)
 	game->img_walls = mlx_xpm_file_to_image
 		(game->mlx_ptr, "images/1.xpm", &game->img_w, &game->img_h);
 	game->img_collectables = mlx_xpm_file_to_image
-		(game->mlx_ptr, "images/C.xpm", &game->img_w, &game->img_h);
+		(game->mlx_ptr, "images/collectables.xpm", &game->img_w, &game->img_h);
 	game->img_exit = mlx_xpm_file_to_image
-		((*game).mlx_ptr, "images/E1.xpm", &game->img_w, &(*game).img_h);
+		((*game).mlx_ptr, "images/E.xpm", &game->img_w, &game->img_h);
 	game->img_ground = mlx_xpm_file_to_image
 		(game->mlx_ptr, "images/0.xpm", &game->img_w, &game->img_h);
 	game->img_player = mlx_xpm_file_to_image
-		(game->mlx_ptr, "images/PD.xpm", &game->img_w, &game->img_h);
+		(game->mlx_ptr, "images/character.xpm", &game->img_w, &game->img_h);
 }

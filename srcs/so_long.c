@@ -44,63 +44,68 @@ int	main(int argc, char **argv)
 
 
 
-	int i = -1;
-	int j;
-	size_t count_line = 0;
-	size_t length;
-	while (game.map_save[++i] != NULL)
-	{
-		count_line++;
-		length = ft_strlen(game.map_save[i]);
-		if (length != ft_strlen(game.map_save[i + 1]) && game.map_save[i + 1] != NULL)
-		{
-			printf("Error format map format\n");
-			free_split(game.map_save);
-			return (1);
-		}
-		j = 0;
-		while (game.map_save[i][j] != '\0')
-		{
-			if (game.map_save[i][j] == 'P' || game.map_save[i][j] == '1' ||
-					game.map_save[i][j] == '0' || game.map_save[i][j] == 'C' ||
-					game.map_save[i][j] == 'E')
-			{
-				j++;
-			}
-			else
-			{
-				printf("Error map contains invalid characters\n");
-				free_split(game.map_save);
-				return (1);
-			}
-
-		}
-
-	}
-//	int k = 0;
-//	while (game.map_save[0][k])
+//	int i = -1;
+//	int j;
+//	size_t count_line = 0;
+//	size_t length;
+//	while (game.map_save[++i] != NULL)
 //	{
-//		if (game.map_save[0][k] != '1')
+//		count_line++;
+//		length = ft_strlen(game.map_save[i]);
+//		if (length != ft_strlen(game.map_save[i + 1]) && game.map_save[i + 1] != NULL)
 //		{
-//			printf("Error Map not closed by walls\n");
-//			free(game.map_save);
+//			printf("Error format map format\n");
+//			free_split(game.map_save);
 //			return (1);
 //		}
-//		k++;
+//		j = 0;
+//		while (game.map_save[i][j] != '\0')
+//		{
+//			if (game.map_save[i][j] == 'P' || game.map_save[i][j] == '1' ||
+//					game.map_save[i][j] == '0' || game.map_save[i][j] == 'C' ||
+//					game.map_save[i][j] == 'E')
+//			{
+//				j++;
+//			}
+//			else
+//			{
+//				printf("Error map contains invalid characters\n");
+//				free_split(game.map_save);
+//				return (1);
+//			}
+//
+//		}
+//
 //	}
 	init_structure(&game);
 
-	if (check_walls(game) == 1)
+	if (check_walls(game))
 	{
-		printf("Byebye\n");
+		printf("Walls\n");
+		// free
+		return (1);
+	}
+	if (check_rectangular(game))
+	{
+		printf("Rectangular\n");
+		// free
 		return (1);
 	}
 
+	if (check_parameters(game))
+	{
+		printf("Invalid param\n");
+		//free
+		return (1);
+	}
+
+
 	/* Initialiser la structure t_objs
 	 * Vérifier s'il y a qu'un seul P, au moins 1 sortie E et 1 collectible.
-	 *
-	 *
 	 */
+
+	int i;
+	int j;
 	for (i = 0; game.map_save[i]; i++) {
 		printf("%s\n", game.map_save[i]);
 	}
@@ -137,8 +142,9 @@ int	main(int argc, char **argv)
 	if (!game.mlx_ptr) {
 		return (1);
 	}
-	printf("countline = %ld\n", count_line);
-	int window_height = count_line * IMG_PIX;
+	printf("countline = %ld\n", game.map_height);
+	printf("width = %ld", ft_strlen(game.map_save[0]));
+	int window_height = game.map_height * IMG_PIX;
 	printf("window height = %d\n", window_height);
 	int window_width = ft_strlen(game.map_save[0]) * IMG_PIX;
 	printf("window width = %d\n", window_width);
