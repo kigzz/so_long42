@@ -21,13 +21,13 @@ void	printfstruct(t_program *data)
 	printf("Player position Y = %d\n", data->player_position.y);
 }
 
-int	main(int argc, char **argv)
+int	main(int argc, char **argv, char **envp)
 {
 	t_program	game;
 
-	if (argc != 2)
+	if (argc != 2 || !*envp)
 	{
-		ft_putstr_fd("Error\nThis program only accept 2 arguments.\n", 2);
+		ft_putstr_fd("Error\n", 2);
 		return (EXIT_FAILURE);
 	}
 	game.map_save = store_map(&game, argv[1]);
@@ -52,6 +52,7 @@ int	main(int argc, char **argv)
 		mlx_destroy_image(game.mlx_ptr, game.img_ground);
 		mlx_destroy_image(game.mlx_ptr, game.img_collectables);
 		mlx_destroy_image(game.mlx_ptr, game.img_exit);
+//		mlx_destroy_image(game.mlx_ptr, game.img_player);		if (game.img_exit) -> free /
 		mlx_destroy_display(game.mlx_ptr);
 		free(game.mlx_ptr);
 		return (1);
