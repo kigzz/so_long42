@@ -65,16 +65,14 @@ typedef struct s_program
 
 int		check_extension(char *str, const char* to_find);
 void	init_structure(t_program *game);
-void	open_image(t_program *game);
-char	**store_map(t_program *game, int fd);
-int	check_walls(t_program game);
-int check_rectangular(t_program game);
-int	check_parameters(t_program game);
+char	**store_map(t_program *game, char *path);
+int		check_map(t_program *game);
 
 /* Game */
 
 void	map_draw(t_program *game);
-void	open_image(t_program *game);
+int		open_image(t_program *game);
+int 	game_init(t_program *game);
 
 
 /* Close */

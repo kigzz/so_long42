@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-int	check_walls(t_program game)
+static int	check_walls(t_program game)
 {
 	int		i;
 	size_t	len;
@@ -35,7 +35,7 @@ int	check_walls(t_program game)
 	return (0);
 }
 
-int	check_rectangular(t_program game)
+static int	check_rectangular(t_program game)
 {
 	int	i;
 
@@ -49,7 +49,7 @@ int	check_rectangular(t_program game)
 	return (0);
 }
 
-int	check_parameters(t_program game)
+static int	check_parameters(t_program game)
 {
 	int	i;
 	int	j;
@@ -72,7 +72,44 @@ int	check_parameters(t_program game)
 	return (0);
 }
 
-//int check_objects(t_program game)
-//{
-//
-//}
+static int	check_objects(t_program *game)
+{
+	int	i;
+	int	j;
+
+	i = -1;
+	while (game->map_save[++i])
+	{
+		j = -1;
+		while (game->map_save[i][++j])
+		{
+			if (game->map_save[i][j] == 'P')
+			{
+				game->player_position.x = i;
+				game->player_position.y = j;
+				game->objs.player += 1;
+			}
+			else if (game->map_save[i][j] == 'C')
+				game->objs.collectables += 1;
+			else if (game->map_save[i][j] == 'E')
+				game->objs.exit += 1;
+		}
+	}
+	if (game->objs.exit == 0 || game->objs.collectables == 0
+		|| game->objs.player != 1)
+		return (1);
+	return (0);
+}
+
+int	check_map(t_program *game)
+{
+	if (!game->map_save)
+		return (1);
+	else if (check_walls(*game) || check_parameters(*game)
+		|| check_rectangular(*game) || check_objects(game))
+	{
+		free_split(game->map_save);
+		return (1);
+	}
+	return (0);
+}

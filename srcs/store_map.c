@@ -12,14 +12,16 @@
 
 #include "so_long.h"
 
-char	**store_map(t_program *game, int fd)
+char	**store_map(t_program *game, char *path)
 {
 	char	*tmp;
 	char	*save_map;
 	char	*read_map;
+	int		fd;
 
+	fd = open(path, O_RDONLY);
 	read_map = ft_get_next_line(fd);
-	if (read_map == NULL)
+	if (read_map == NULL || fd == -1)
 		return (NULL);
 	save_map = ft_strdup("");
 	while (read_map != NULL)

@@ -225,6 +225,30 @@ srcs/ft_free.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/ft_free.c.s
 .PHONY : srcs/ft_free.c.s
 
+srcs/game_init.o: srcs/game_init.c.o
+.PHONY : srcs/game_init.o
+
+# target to build an object file
+srcs/game_init.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/game_init.c.o
+.PHONY : srcs/game_init.c.o
+
+srcs/game_init.i: srcs/game_init.c.i
+.PHONY : srcs/game_init.i
+
+# target to preprocess a source file
+srcs/game_init.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/game_init.c.i
+.PHONY : srcs/game_init.c.i
+
+srcs/game_init.s: srcs/game_init.c.s
+.PHONY : srcs/game_init.s
+
+# target to generate assembly for a file
+srcs/game_init.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/game_init.c.s
+.PHONY : srcs/game_init.c.s
+
 srcs/init_structure.o: srcs/init_structure.c.o
 .PHONY : srcs/init_structure.o
 
@@ -248,6 +272,30 @@ srcs/init_structure.s: srcs/init_structure.c.s
 srcs/init_structure.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/init_structure.c.s
 .PHONY : srcs/init_structure.c.s
+
+srcs/map_draw.o: srcs/map_draw.c.o
+.PHONY : srcs/map_draw.o
+
+# target to build an object file
+srcs/map_draw.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/map_draw.c.o
+.PHONY : srcs/map_draw.c.o
+
+srcs/map_draw.i: srcs/map_draw.c.i
+.PHONY : srcs/map_draw.i
+
+# target to preprocess a source file
+srcs/map_draw.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/map_draw.c.i
+.PHONY : srcs/map_draw.c.i
+
+srcs/map_draw.s: srcs/map_draw.c.s
+.PHONY : srcs/map_draw.s
+
+# target to generate assembly for a file
+srcs/map_draw.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/map_draw.c.s
+.PHONY : srcs/map_draw.c.s
 
 srcs/open_image.o: srcs/open_image.c.o
 .PHONY : srcs/open_image.o
@@ -342,9 +390,15 @@ help:
 	@echo "... srcs/ft_free.o"
 	@echo "... srcs/ft_free.i"
 	@echo "... srcs/ft_free.s"
+	@echo "... srcs/game_init.o"
+	@echo "... srcs/game_init.i"
+	@echo "... srcs/game_init.s"
 	@echo "... srcs/init_structure.o"
 	@echo "... srcs/init_structure.i"
 	@echo "... srcs/init_structure.s"
+	@echo "... srcs/map_draw.o"
+	@echo "... srcs/map_draw.i"
+	@echo "... srcs/map_draw.s"
 	@echo "... srcs/open_image.o"
 	@echo "... srcs/open_image.i"
 	@echo "... srcs/open_image.s"

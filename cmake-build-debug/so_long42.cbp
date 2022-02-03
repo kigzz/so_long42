@@ -94,7 +94,13 @@
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/ft_free.c">
 			<Option target="so_long"/>
 		</Unit>
+		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/game_init.c">
+			<Option target="so_long"/>
+		</Unit>
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/init_structure.c">
+			<Option target="so_long"/>
+		</Unit>
+		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/map_draw.c">
 			<Option target="so_long"/>
 		</Unit>
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/open_image.c">
