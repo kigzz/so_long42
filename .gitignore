@@ -1,4 +1,3 @@
-Makefile.gen
 *.o
 so_long
 libft.a
