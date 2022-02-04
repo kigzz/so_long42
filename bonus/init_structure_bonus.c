@@ -34,4 +34,6 @@ void	init_structure(t_program *game)
 	game->endloop = 0;
 	game->moves = 0;
 	game->map_height = count_line(game->map_save);
+	game->window_h = 0;
+	game->window_w = 0;
 }

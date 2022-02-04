@@ -56,6 +56,8 @@ typedef struct s_program
 	void	*img_ground;
 	int		img_w;
 	int		img_h;
+	int		window_w;
+	int		window_h;
 	int		moves;
 	int		endloop;
 	t_obj	objs;
