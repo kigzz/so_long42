@@ -1,9 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   map_draw.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpouchep <bpouchep@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/04 13:14:08 by bpouchep          #+#    #+#             */
+/*   Updated: 2022/02/04 13:14:09 by bpouchep         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
+
+static void	img_draw(t_program *game, void *image, int i, int j)
+{
+	mlx_put_image_to_window(game->mlx_ptr, game->window, image, j * IMG_PIX,
+		i * IMG_PIX);
+}
 
 void	map_draw(t_program *game)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = -1;
 	while (game->map_save[++i])
@@ -12,20 +30,15 @@ void	map_draw(t_program *game)
 		while (game->map_save[i][++j] != '\0')
 		{
 			if (game->map_save[i][j] == '1')
-				mlx_put_image_to_window(game->mlx_ptr, game->window, game->img_walls, j * IMG_PIX,
-										i * IMG_PIX);
+				img_draw(game, game->img_walls, i, j);
 			else if (game->map_save[i][j] == 'P')
-				mlx_put_image_to_window(game->mlx_ptr, game->window, game->img_player, j * IMG_PIX,
-										i * IMG_PIX);
+				img_draw(game, game->img_player, i, j);
 			else if (game->map_save[i][j] == 'C')
-				mlx_put_image_to_window(game->mlx_ptr, game->window, game->img_collectables, j * IMG_PIX,
-										i * IMG_PIX);
+				img_draw(game, game->img_col, i, j);
 			else if (game->map_save[i][j] == '0')
-				mlx_put_image_to_window(game->mlx_ptr, game->window, game->img_ground, j * IMG_PIX,
-										i * IMG_PIX);
+				img_draw(game, game->img_ground, i, j);
 			else if (game->map_save[i][j] == 'E')
-				mlx_put_image_to_window(game->mlx_ptr, game->window, game->img_exit, j * IMG_PIX,
-										i * IMG_PIX);
+				img_draw(game, game->img_exit, i, j);
 		}
 	}
 }

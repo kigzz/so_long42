@@ -26,10 +26,10 @@ static size_t	count_line(char **map)
 
 void	init_structure(t_program *game)
 {
-	game->objs.collectables = 0;
+	game->objs.coll = 0;
 	game->objs.exit = 0;
 	game->objs.player = 0;
-	game->player_position.x = 0;
-	game->player_position.y = 0;
+	game->p_pos.x = 0;
+	game->p_pos.y = 0;
 	game->map_height = count_line(game->map_save);
 }

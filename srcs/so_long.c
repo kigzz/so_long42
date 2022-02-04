@@ -16,9 +16,9 @@ void	printfstruct(t_program *data)
 {
 	printf("Objs.exit = %d\n", data->objs.exit);
 	printf("Objs.player = %d\n", data->objs.player);
-	printf("Objs.collect = %d\n", data->objs.collectables);
-	printf("Player position X = %d\n", data->player_position.x);
-	printf("Player position Y = %d\n", data->player_position.y);
+	printf("Objs.collect = %d\n", data->objs.coll);
+	printf("Player position X = %d\n", data->p_pos.x);
+	printf("Player position Y = %d\n", data->p_pos.y);
 }
 
 int	main(int argc, char **argv, char **envp)
@@ -27,14 +27,14 @@ int	main(int argc, char **argv, char **envp)
 
 	if (argc != 2 || !*envp)
 	{
-		ft_putstr_fd("Error\n", 2);
+		ft_putstr_fd("Error\nAre you trying to crash my prog? :)", 2);
 		return (EXIT_FAILURE);
 	}
 	game.map_save = store_map(&game, argv[1]);
 	init_structure(&game);
-	if (check_map(&game) || check_extension(argv[1], ".ber"))
+	if (check_extension(argv[1], ".ber") || check_map(&game))
 	{
-		printf("Error\nInvalid map.");
+		ft_putstr_fd("Error\nVerify if map is valid.", 2);
 		return (1);
 	}
 	printfstruct(&game);
@@ -43,20 +43,7 @@ int	main(int argc, char **argv, char **envp)
 
 
 	/* IMAGES */
-	if (open_image(&game))
-	{
-		free_split(game.map_save);
-		mlx_destroy_window(game.mlx_ptr, game.window);
-		game.window = NULL;
-		mlx_destroy_image(game.mlx_ptr, game.img_walls);
-		mlx_destroy_image(game.mlx_ptr, game.img_ground);
-		mlx_destroy_image(game.mlx_ptr, game.img_collectables);
-		mlx_destroy_image(game.mlx_ptr, game.img_exit);
-//		mlx_destroy_image(game.mlx_ptr, game.img_player);		if (game.img_exit) -> free /
-		mlx_destroy_display(game.mlx_ptr);
-		free(game.mlx_ptr);
-		return (1);
-	}
+	open_image(&game);
 	map_draw(&game);
 
 
@@ -69,11 +56,12 @@ int	main(int argc, char **argv, char **envp)
 	mlx_loop(game.mlx_ptr);
 
 	/* Free */
+//	printfstruct(&game);
 
 	free_split(game.map_save);
 	mlx_destroy_image(game.mlx_ptr, game.img_walls);
 	mlx_destroy_image(game.mlx_ptr, game.img_ground);
-	mlx_destroy_image(game.mlx_ptr, game.img_collectables);
+	mlx_destroy_image(game.mlx_ptr, game.img_col);
 	mlx_destroy_image(game.mlx_ptr, game.img_exit);
 	mlx_destroy_image(game.mlx_ptr, game.img_player);
 	mlx_destroy_display(game.mlx_ptr);
