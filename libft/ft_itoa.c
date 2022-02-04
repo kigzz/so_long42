@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-#include "libft.h"
-
 static int	nb_len(long int n)
 {
 	int	len;
