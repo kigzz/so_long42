@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/bpouchep/CLionProjects/so_long42/srcs/init_structure.c" "CMakeFiles/so_long.dir/srcs/init_structure.c.o" "gcc" "CMakeFiles/so_long.dir/srcs/init_structure.c.o.d"
   "/home/bpouchep/CLionProjects/so_long42/srcs/map_draw.c" "CMakeFiles/so_long.dir/srcs/map_draw.c.o" "gcc" "CMakeFiles/so_long.dir/srcs/map_draw.c.o.d"
   "/home/bpouchep/CLionProjects/so_long42/srcs/open_image.c" "CMakeFiles/so_long.dir/srcs/open_image.c.o" "gcc" "CMakeFiles/so_long.dir/srcs/open_image.c.o.d"
+  "/home/bpouchep/CLionProjects/so_long42/srcs/player_movement.c" "CMakeFiles/so_long.dir/srcs/player_movement.c.o" "gcc" "CMakeFiles/so_long.dir/srcs/player_movement.c.o.d"
   "/home/bpouchep/CLionProjects/so_long42/srcs/so_long.c" "CMakeFiles/so_long.dir/srcs/so_long.c.o" "gcc" "CMakeFiles/so_long.dir/srcs/so_long.c.o.d"
   "/home/bpouchep/CLionProjects/so_long42/srcs/store_map.c" "CMakeFiles/so_long.dir/srcs/store_map.c.o" "gcc" "CMakeFiles/so_long.dir/srcs/store_map.c.o.d"
   )

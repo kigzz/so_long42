@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/so_long.dir/srcs/map_draw.c.o.d"
   "CMakeFiles/so_long.dir/srcs/open_image.c.o"
   "CMakeFiles/so_long.dir/srcs/open_image.c.o.d"
+  "CMakeFiles/so_long.dir/srcs/player_movement.c.o"
+  "CMakeFiles/so_long.dir/srcs/player_movement.c.o.d"
   "CMakeFiles/so_long.dir/srcs/so_long.c.o"
   "CMakeFiles/so_long.dir/srcs/so_long.c.o.d"
   "CMakeFiles/so_long.dir/srcs/store_map.c.o"

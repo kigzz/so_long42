@@ -75,6 +75,13 @@ void	map_draw(t_program *game);
 int		open_image(t_program *game);
 int		game_init(t_program *game);
 
+/* Player movements */
+
+int	player_w(t_program *game);
+int	player_s(t_program *game);
+int	player_a(t_program *game);
+int	player_d(t_program *game);
+
 /* Close */
 
 int		key_pressed(int keysym, t_program *data);
@@ -83,5 +90,6 @@ int		close_redcross(t_program *data);
 /* Free */
 
 void	free_split(char **str);
+void	free_game(t_program *game);
 
 #endif

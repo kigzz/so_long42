@@ -21,3 +21,15 @@ void	free_split(char **str)
 		free(str[i]);
 	free(str);
 }
+
+void	free_game(t_program *game)
+{
+	free_split(game->map_save);
+	mlx_destroy_image(game->mlx_ptr, game->img_walls);
+	mlx_destroy_image(game->mlx_ptr, game->img_ground);
+	mlx_destroy_image(game->mlx_ptr, game->img_col);
+	mlx_destroy_image(game->mlx_ptr, game->img_exit);
+	mlx_destroy_image(game->mlx_ptr, game->img_player);
+	mlx_destroy_display(game->mlx_ptr);
+	free(game->mlx_ptr);
+}

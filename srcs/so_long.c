@@ -37,34 +37,12 @@ int	main(int argc, char **argv, char **envp)
 		ft_putstr_fd("Error\nVerify if map is valid.", 2);
 		return (1);
 	}
-	printfstruct(&game);
-
 	game_init(&game);
-
-
-	/* IMAGES */
 	open_image(&game);
 	map_draw(&game);
-
-
-
-
-		/* Hook close */
-
 	mlx_hook(game.window, DestroyNotify, LeaveWindowMask, &close_redcross, &game);
 	mlx_hook(game.window, KeyPress, KeyPressMask, &key_pressed, &game);
 	mlx_loop(game.mlx_ptr);
-
-	/* Free */
-//	printfstruct(&game);
-
-	free_split(game.map_save);
-	mlx_destroy_image(game.mlx_ptr, game.img_walls);
-	mlx_destroy_image(game.mlx_ptr, game.img_ground);
-	mlx_destroy_image(game.mlx_ptr, game.img_col);
-	mlx_destroy_image(game.mlx_ptr, game.img_exit);
-	mlx_destroy_image(game.mlx_ptr, game.img_player);
-	mlx_destroy_display(game.mlx_ptr);
-	free(game.mlx_ptr);
+	free_game(&game);
 	return (0);
 }

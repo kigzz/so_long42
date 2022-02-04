@@ -106,6 +106,9 @@
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/open_image.c">
 			<Option target="so_long"/>
 		</Unit>
+		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/player_movement.c">
+			<Option target="so_long"/>
+		</Unit>
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/so_long.c">
 			<Option target="so_long"/>
 		</Unit>

@@ -22,87 +22,91 @@ int	key_pressed(int keysym, t_program *game)
 	}
 	else if (keysym == KEY_W)
 	{
-		if (game->map_save[game->p_pos.x - 1][game->p_pos.y] == '1'
-		|| (game->map_save[game->p_pos.x - 1][game->p_pos.y] == 'E' && game->objs.coll != 0))
-			return (0);
-		else if (game->map_save[game->p_pos.x - 1][game->p_pos.y] == 'E' && game->objs.coll == 0)
-		{
-			mlx_destroy_window(game->mlx_ptr, game->window);
-			game->window = NULL;
-			mlx_loop_end(game->mlx_ptr);
-			return (0);
-		}
-		else if (game->map_save[game->p_pos.x - 1][game->p_pos.y] == 'C')
-		{
-			game->objs.coll -= 1;
-		}
-		game->map_save[game->p_pos.x][game->p_pos.y] = '0';
-		game->map_save[game->p_pos.x - 1][game->p_pos.y] = 'P';
-		game->p_pos.x -= 1;
-		map_draw(game);
+//		if (game->map_save[game->p_pos.x - 1][game->p_pos.y] == '1'
+//		|| (game->map_save[game->p_pos.x - 1][game->p_pos.y] == 'E' && game->objs.coll != 0))
+//			return (0);
+//		else if (game->map_save[game->p_pos.x - 1][game->p_pos.y] == 'E' && game->objs.coll == 0)
+//		{
+//			mlx_destroy_window(game->mlx_ptr, game->window);
+//			game->window = NULL;
+//			mlx_loop_end(game->mlx_ptr);
+//			return (0);
+//		}
+//		else if (game->map_save[game->p_pos.x - 1][game->p_pos.y] == 'C')
+//		{
+//			game->objs.coll -= 1;
+//		}
+//		game->map_save[game->p_pos.x][game->p_pos.y] = '0';
+//		game->map_save[game->p_pos.x - 1][game->p_pos.y] = 'P';
+//		game->p_pos.x -= 1;
+//		map_draw(game);
+		player_w(game);
 	}
 	else if (keysym == KEY_S)
 	{
-		if (game->map_save[game->p_pos.x + 1][game->p_pos.y] == '1'
-		|| (game->map_save[game->p_pos.x + 1][game->p_pos.y] == 'E' && game->objs.coll != 0))
-			return (0);
-		else if (game->map_save[game->p_pos.x + 1][game->p_pos.y] == 'E' && game->objs.coll == 0)
-		{
-			mlx_destroy_window(game->mlx_ptr, game->window);
-			game->window = NULL;
-			mlx_loop_end(game->mlx_ptr);
-			return (0);
-		}
-		else if (game->map_save[game->p_pos.x + 1][game->p_pos.y] == 'C')
-		{
-			game->objs.coll -= 1;
-		}
-		game->map_save[game->p_pos.x][game->p_pos.y] = '0';
-		game->map_save[game->p_pos.x + 1][game->p_pos.y] = 'P';
-		game->p_pos.x += 1;
-		map_draw(game);
+//		if (game->map_save[game->p_pos.x + 1][game->p_pos.y] == '1'
+//		|| (game->map_save[game->p_pos.x + 1][game->p_pos.y] == 'E' && game->objs.coll != 0))
+//			return (0);
+//		else if (game->map_save[game->p_pos.x + 1][game->p_pos.y] == 'E' && game->objs.coll == 0)
+//		{
+//			mlx_destroy_window(game->mlx_ptr, game->window);
+//			game->window = NULL;
+//			mlx_loop_end(game->mlx_ptr);
+//			return (0);
+//		}
+//		else if (game->map_save[game->p_pos.x + 1][game->p_pos.y] == 'C')
+//		{
+//			game->objs.coll -= 1;
+//		}
+//		game->map_save[game->p_pos.x][game->p_pos.y] = '0';
+//		game->map_save[game->p_pos.x + 1][game->p_pos.y] = 'P';
+//		game->p_pos.x += 1;
+//		map_draw(game);
+		player_s(game);
 	}
 	else if (keysym == KEY_A)
 	{
-		if (game->map_save[game->p_pos.x][game->p_pos.y - 1] == '1'
-		|| (game->map_save[game->p_pos.x][game->p_pos.y - 1] == 'E' && game->objs.coll != 0))
-			return (0);
-		else if (game->map_save[game->p_pos.x][game->p_pos.y - 1] == 'E' && game->objs.coll == 0)
-		{
-			mlx_destroy_window(game->mlx_ptr, game->window);
-			game->window = NULL;
-			mlx_loop_end(game->mlx_ptr);
-			return (0);
-		}
-		else if (game->map_save[game->p_pos.x][game->p_pos.y - 1] == 'C')
-		{
-			game->objs.coll -= 1;
-		}
-			game->map_save[game->p_pos.x][game->p_pos.y] = '0';
-		game->map_save[game->p_pos.x][game->p_pos.y - 1] = 'P';
-		game->p_pos.y -= 1;
-		map_draw(game);
+//		if (game->map_save[game->p_pos.x][game->p_pos.y - 1] == '1'
+//		|| (game->map_save[game->p_pos.x][game->p_pos.y - 1] == 'E' && game->objs.coll != 0))
+//			return (0);
+//		else if (game->map_save[game->p_pos.x][game->p_pos.y - 1] == 'E' && game->objs.coll == 0)
+//		{
+//			mlx_destroy_window(game->mlx_ptr, game->window);
+//			game->window = NULL;
+//			mlx_loop_end(game->mlx_ptr);
+//			return (0);
+//		}
+//		else if (game->map_save[game->p_pos.x][game->p_pos.y - 1] == 'C')
+//		{
+//			game->objs.coll -= 1;
+//		}
+//			game->map_save[game->p_pos.x][game->p_pos.y] = '0';
+//		game->map_save[game->p_pos.x][game->p_pos.y - 1] = 'P';
+//		game->p_pos.y -= 1;
+//		map_draw(game);
+		player_a(game);
 	}
 	else if (keysym == KEY_D)
 	{
-		if (game->map_save[game->p_pos.x][game->p_pos.y + 1] == '1'
-		|| (game->map_save[game->p_pos.x][game->p_pos.y + 1] == 'E' && game->objs.coll != 0))
-			return (0);
-		if (game->map_save[game->p_pos.x][game->p_pos.y + 1] == 'E' && game->objs.coll == 0)
-		{
-			mlx_destroy_window(game->mlx_ptr, game->window);
-			game->window = NULL;
-			mlx_loop_end(game->mlx_ptr);
-			return (0);
-		}
-		if (game->map_save[game->p_pos.x][game->p_pos.y + 1] == 'C')
-		{
-			game->objs.coll -= 1;
-		}
-		game->map_save[game->p_pos.x][game->p_pos.y] = '0';
-		game->map_save[game->p_pos.x][game->p_pos.y + 1] = 'P';
-		game->p_pos.y += 1;
-		map_draw(game);
+//		if (game->map_save[game->p_pos.x][game->p_pos.y + 1] == '1'
+//		|| (game->map_save[game->p_pos.x][game->p_pos.y + 1] == 'E' && game->objs.coll != 0))
+//			return (0);
+//		if (game->map_save[game->p_pos.x][game->p_pos.y + 1] == 'E' && game->objs.coll == 0)
+//		{
+//			mlx_destroy_window(game->mlx_ptr, game->window);
+//			game->window = NULL;
+//			mlx_loop_end(game->mlx_ptr);
+//			return (0);
+//		}
+//		if (game->map_save[game->p_pos.x][game->p_pos.y + 1] == 'C')
+//		{
+//			game->objs.coll -= 1;
+//		}
+//		game->map_save[game->p_pos.x][game->p_pos.y] = '0';
+//		game->map_save[game->p_pos.x][game->p_pos.y + 1] = 'P';
+//		game->p_pos.y += 1;
+//		map_draw(game);
+		player_d(game);
 	}
 	return (0);
 }

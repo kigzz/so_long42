@@ -321,6 +321,30 @@ srcs/open_image.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/open_image.c.s
 .PHONY : srcs/open_image.c.s
 
+srcs/player_movement.o: srcs/player_movement.c.o
+.PHONY : srcs/player_movement.o
+
+# target to build an object file
+srcs/player_movement.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/player_movement.c.o
+.PHONY : srcs/player_movement.c.o
+
+srcs/player_movement.i: srcs/player_movement.c.i
+.PHONY : srcs/player_movement.i
+
+# target to preprocess a source file
+srcs/player_movement.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/player_movement.c.i
+.PHONY : srcs/player_movement.c.i
+
+srcs/player_movement.s: srcs/player_movement.c.s
+.PHONY : srcs/player_movement.s
+
+# target to generate assembly for a file
+srcs/player_movement.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/player_movement.c.s
+.PHONY : srcs/player_movement.c.s
+
 srcs/so_long.o: srcs/so_long.c.o
 .PHONY : srcs/so_long.o
 
@@ -402,6 +426,9 @@ help:
 	@echo "... srcs/open_image.o"
 	@echo "... srcs/open_image.i"
 	@echo "... srcs/open_image.s"
+	@echo "... srcs/player_movement.o"
+	@echo "... srcs/player_movement.i"
+	@echo "... srcs/player_movement.s"
 	@echo "... srcs/so_long.o"
 	@echo "... srcs/so_long.i"
 	@echo "... srcs/so_long.s"

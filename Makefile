@@ -27,7 +27,7 @@ LIBFT_FLAGS		=	-Llibft -lft
 #FILES AND PATH
 
 SRCS    		=	so_long.c ft_free.c check_extension.c init_structure.c close_window.c open_image.c store_map.c \
-					check_map.c game_init.c map_draw.c
+					check_map.c game_init.c map_draw.c player_movement.c
 
 SRCS_DIR		=	srcs/
 SRCS_PATH		=	$(addprefix $(SRCS_DIR), $(SRCS))
