@@ -74,13 +74,15 @@ int		check_map(t_program *game);
 void	map_draw(t_program *game);
 int		open_image(t_program *game);
 int		game_init(t_program *game);
+void	exit_loop(t_program *game);
+void	show_moves_count(t_program *game);
 
 /* Player movements */
 
-int	player_w(t_program *game);
-int	player_s(t_program *game);
-int	player_a(t_program *game);
-int	player_d(t_program *game);
+int		player_w(t_program *game);
+int		player_s(t_program *game);
+int		player_a(t_program *game);
+int		player_d(t_program *game);
 
 /* Close */
 

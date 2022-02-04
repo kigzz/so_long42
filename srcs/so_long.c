@@ -40,8 +40,8 @@ int	main(int argc, char **argv, char **envp)
 	game_init(&game);
 	open_image(&game);
 	map_draw(&game);
-	mlx_hook(game.window, DestroyNotify, LeaveWindowMask, &close_redcross, &game);
-	mlx_hook(game.window, KeyPress, KeyPressMask, &key_pressed, &game);
+	mlx_hook(game.window, 17, 1L << 5, &close_redcross, &game);
+	mlx_hook(game.window, 2, 1L << 0, &key_pressed, &game);
 	mlx_loop(game.mlx_ptr);
 	free_game(&game);
 	return (0);

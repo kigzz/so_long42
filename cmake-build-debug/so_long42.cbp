@@ -88,13 +88,13 @@
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/check_map.c">
 			<Option target="so_long"/>
 		</Unit>
-		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/close_window.c">
-			<Option target="so_long"/>
-		</Unit>
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/ft_free.c">
 			<Option target="so_long"/>
 		</Unit>
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/game_init.c">
+			<Option target="so_long"/>
+		</Unit>
+		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/hook_functions.c">
 			<Option target="so_long"/>
 		</Unit>
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/init_structure.c">
@@ -107,6 +107,9 @@
 			<Option target="so_long"/>
 		</Unit>
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/player_movement.c">
+			<Option target="so_long"/>
+		</Unit>
+		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/show_moves.c">
 			<Option target="so_long"/>
 		</Unit>
 		<Unit filename="/home/bpouchep/CLionProjects/so_long42/srcs/so_long.c">

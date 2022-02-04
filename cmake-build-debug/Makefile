@@ -177,30 +177,6 @@ srcs/check_map.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/check_map.c.s
 .PHONY : srcs/check_map.c.s
 
-srcs/close_window.o: srcs/close_window.c.o
-.PHONY : srcs/close_window.o
-
-# target to build an object file
-srcs/close_window.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/close_window.c.o
-.PHONY : srcs/close_window.c.o
-
-srcs/close_window.i: srcs/close_window.c.i
-.PHONY : srcs/close_window.i
-
-# target to preprocess a source file
-srcs/close_window.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/close_window.c.i
-.PHONY : srcs/close_window.c.i
-
-srcs/close_window.s: srcs/close_window.c.s
-.PHONY : srcs/close_window.s
-
-# target to generate assembly for a file
-srcs/close_window.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/close_window.c.s
-.PHONY : srcs/close_window.c.s
-
 srcs/ft_free.o: srcs/ft_free.c.o
 .PHONY : srcs/ft_free.o
 
@@ -248,6 +224,30 @@ srcs/game_init.s: srcs/game_init.c.s
 srcs/game_init.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/game_init.c.s
 .PHONY : srcs/game_init.c.s
+
+srcs/hook_functions.o: srcs/hook_functions.c.o
+.PHONY : srcs/hook_functions.o
+
+# target to build an object file
+srcs/hook_functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/hook_functions.c.o
+.PHONY : srcs/hook_functions.c.o
+
+srcs/hook_functions.i: srcs/hook_functions.c.i
+.PHONY : srcs/hook_functions.i
+
+# target to preprocess a source file
+srcs/hook_functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/hook_functions.c.i
+.PHONY : srcs/hook_functions.c.i
+
+srcs/hook_functions.s: srcs/hook_functions.c.s
+.PHONY : srcs/hook_functions.s
+
+# target to generate assembly for a file
+srcs/hook_functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/hook_functions.c.s
+.PHONY : srcs/hook_functions.c.s
 
 srcs/init_structure.o: srcs/init_structure.c.o
 .PHONY : srcs/init_structure.o
@@ -345,6 +345,30 @@ srcs/player_movement.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/player_movement.c.s
 .PHONY : srcs/player_movement.c.s
 
+srcs/show_moves.o: srcs/show_moves.c.o
+.PHONY : srcs/show_moves.o
+
+# target to build an object file
+srcs/show_moves.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/show_moves.c.o
+.PHONY : srcs/show_moves.c.o
+
+srcs/show_moves.i: srcs/show_moves.c.i
+.PHONY : srcs/show_moves.i
+
+# target to preprocess a source file
+srcs/show_moves.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/show_moves.c.i
+.PHONY : srcs/show_moves.c.i
+
+srcs/show_moves.s: srcs/show_moves.c.s
+.PHONY : srcs/show_moves.s
+
+# target to generate assembly for a file
+srcs/show_moves.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/show_moves.c.s
+.PHONY : srcs/show_moves.c.s
+
 srcs/so_long.o: srcs/so_long.c.o
 .PHONY : srcs/so_long.o
 
@@ -408,15 +432,15 @@ help:
 	@echo "... srcs/check_map.o"
 	@echo "... srcs/check_map.i"
 	@echo "... srcs/check_map.s"
-	@echo "... srcs/close_window.o"
-	@echo "... srcs/close_window.i"
-	@echo "... srcs/close_window.s"
 	@echo "... srcs/ft_free.o"
 	@echo "... srcs/ft_free.i"
 	@echo "... srcs/ft_free.s"
 	@echo "... srcs/game_init.o"
 	@echo "... srcs/game_init.i"
 	@echo "... srcs/game_init.s"
+	@echo "... srcs/hook_functions.o"
+	@echo "... srcs/hook_functions.i"
+	@echo "... srcs/hook_functions.s"
 	@echo "... srcs/init_structure.o"
 	@echo "... srcs/init_structure.i"
 	@echo "... srcs/init_structure.s"
@@ -429,6 +453,9 @@ help:
 	@echo "... srcs/player_movement.o"
 	@echo "... srcs/player_movement.i"
 	@echo "... srcs/player_movement.s"
+	@echo "... srcs/show_moves.o"
+	@echo "... srcs/show_moves.i"
+	@echo "... srcs/show_moves.s"
 	@echo "... srcs/so_long.o"
 	@echo "... srcs/so_long.i"
 	@echo "... srcs/so_long.s"
