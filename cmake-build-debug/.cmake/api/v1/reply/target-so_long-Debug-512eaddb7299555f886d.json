@@ -45,6 +45,12 @@
 				"file" : 0,
 				"line" : 9,
 				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
 			}
 		]
 	},
@@ -73,6 +79,10 @@
 				{
 					"backtrace" : 4,
 					"path" : "/home/bpouchep/CLionProjects/so_long42/libft"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/bpouchep/CLionProjects/so_long42/bonus"
 				}
 			],
 			"language" : "C",

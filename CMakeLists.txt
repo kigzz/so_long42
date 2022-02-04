@@ -7,3 +7,4 @@ add_executable(so_long srcs/so_long.c srcs/ft_free.c srcs/check_extension.c srcs
 include_directories(includes/)
 include_directories(mlx_linux/)
 include_directories(libft/)
+include_directories(bonus/)

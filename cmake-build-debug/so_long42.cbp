@@ -47,6 +47,7 @@
 					<Add directory="/home/bpouchep/CLionProjects/so_long42/includes"/>
 					<Add directory="/home/bpouchep/CLionProjects/so_long42/mlx_linux"/>
 					<Add directory="/home/bpouchep/CLionProjects/so_long42/libft"/>
+					<Add directory="/home/bpouchep/CLionProjects/so_long42/bonus"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -69,6 +70,7 @@
 					<Add directory="/home/bpouchep/CLionProjects/so_long42/includes"/>
 					<Add directory="/home/bpouchep/CLionProjects/so_long42/mlx_linux"/>
 					<Add directory="/home/bpouchep/CLionProjects/so_long42/libft"/>
+					<Add directory="/home/bpouchep/CLionProjects/so_long42/bonus"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>

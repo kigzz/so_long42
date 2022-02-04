@@ -12,56 +12,53 @@
 
 #include "libft.h"
 
-static int	number_char(long n)
+#include "libft.h"
+
+static int	nb_len(long int n)
 {
-	int		len;
+	int	len;
 
 	len = 0;
+	if (n == 0)
+		len = 1;
 	if (n < 0)
-		n = -n;
+	{
+		n *= -1;
+		len ++;
+	}
 	while (n > 0)
 	{
-		n /= 10;
+		n = n / 10;
 		len++;
 	}
 	return (len);
 }
 
-static int	ft_recursive_power(int nb, int power)
-{
-	if (power < 0)
-		return (0);
-	if (power == 0)
-		return (1);
-	else
-		return (nb * ft_recursive_power(nb, power - 1));
-}
-
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		len;
-	int		i;
-	long	nb;
+	int			len;
+	char		*str;
+	long int	nbr;
 
-	nb = n;
-	len = number_char(nb);
-	i = -1;
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	nbr = n;
+	len = nb_len(nbr);
+	str = malloc ((len) * sizeof(char) + 1);
 	if (!str)
 		return (NULL);
-	if (nb == 0)
-		str[++i] = '0';
-	if (nb < 0)
+	str[len] = '\0';
+	len = len - 1;
+	if (nbr == 0)
+		str[0] = '0';
+	if (nbr < 0)
 	{
-		str[++i] = '-';
-		nb = -nb;
+		nbr = nbr * -1;
+		str[0] = '-';
 	}
-	while (len-- > 0)
+	while (nbr > 0)
 	{
-		str[++i] = nb / ft_recursive_power(10, len) + '0';
-		nb = nb % ft_recursive_power(10, len);
+		str[len] = (nbr % 10) + '0';
+		nbr = nbr / 10;
+		len--;
 	}
-	str[++i] = '\0';
 	return (str);
 }
