@@ -17,7 +17,9 @@ void	show_moves_count(t_program *game)
 	char	*str;
 
 	str = ft_itoa(game->moves);
-	mlx_string_put(game->mlx_ptr, game->window, 20, game->map_height * IMG_PIX + 20, 0xFFFFFF, "MOVES: ");
-	mlx_string_put(game->mlx_ptr, game->window, 65, game->map_height * IMG_PIX + 20, 0xFFFFFF, str);
+	mlx_string_put(game->mlx_ptr, game->window, 20,
+		game->map_height * IMG_PIX + 20, 0xFFFFFF, "MOVES: ");
+	mlx_string_put(game->mlx_ptr, game->window, 65,
+		game->map_height * IMG_PIX + 20, 0xFFFFFF, str);
 	free(str);
 }

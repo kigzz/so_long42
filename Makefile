@@ -64,6 +64,7 @@ $(NAME_BONUS):		$(OBJ_SRCS_BONUS)
 
 clean:
 					@$(RM) $(OBJ_SRCS)
+					@$(RM) $(OBJ_SRCS_BONUS)
 					@make clean -C $(LIBFT_DIR)
 					@make clean -C $(MLX)
 
