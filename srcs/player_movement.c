@@ -22,7 +22,7 @@ int	player_w(t_program *game)
 			&& game->objs.coll == 0)
 	{
 		exit_loop(game);
-		ft_putstr_fd("Gg wp :)", 1);
+		ft_putstr_fd("Gg wp :)\n", 1);
 		return (0);
 	}
 	else if (game->map_save[game->p_pos.x - 1][game->p_pos.y] == 'C')
@@ -46,7 +46,7 @@ int	player_s(t_program *game)
 			&& game->objs.coll == 0)
 	{
 		exit_loop(game);
-		ft_putstr_fd("Gg wp :)", 1);
+		ft_putstr_fd("Gg wp :)\n", 1);
 		return (0);
 	}
 	else if (game->map_save[game->p_pos.x + 1][game->p_pos.y] == 'C')
@@ -70,7 +70,7 @@ int	player_a(t_program *game)
 			&& game->objs.coll == 0)
 	{
 		exit_loop(game);
-		ft_putstr_fd("Gg wp", 1);
+		ft_putstr_fd("Gg wp :)\n", 1);
 		return (0);
 	}
 	else if (game->map_save[game->p_pos.x][game->p_pos.y - 1] == 'C')
@@ -94,7 +94,7 @@ int	player_d(t_program *game)
 		&& game->objs.coll == 0)
 	{
 		exit_loop(game);
-		ft_putstr_fd("Gg wp :)", 1);
+		ft_putstr_fd("Gg wp :)\n", 1);
 		return (0);
 	}
 	if (game->map_save[game->p_pos.x][game->p_pos.y + 1] == 'C')
