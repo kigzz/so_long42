@@ -6,7 +6,6 @@ CC				=	gcc
 FLAGS			=	-Wall -Wextra -Werror -Iincludes -Ilibft -Imlx_linux -O3
 #-g3 -fsanitize=address
 
-# -g3 -fsanitize=address
 RM				=	rm -rf
 
 #LIB NAMES
@@ -43,7 +42,7 @@ all:				$(NAME)
 
 $(NAME):			$(OBJ_SRCS)
 					@make -C $(LIBFT_DIR)
-					@#make -C $(MLX_DIR)
+					@make -C $(MLX_DIR)
 					@$(CC) $(FLAGS) $(OBJ_SRCS) $(LIBFT_FLAGS) $(MLX_LINUX_FLAGS) -o $(NAME)
 
 
@@ -52,7 +51,7 @@ $(NAME):			$(OBJ_SRCS)
 clean:
 					@$(RM) $(OBJ_SRCS)
 					@make clean -C $(LIBFT_DIR)
-					@#make clean -C $(MLX)
+					@make clean -C $(MLX)
 
 fclean:				clean
 					@$(RM) $(NAME)

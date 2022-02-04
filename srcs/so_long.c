@@ -12,15 +12,6 @@
 
 #include "so_long.h"
 
-void	printfstruct(t_program *data)
-{
-	printf("Objs.exit = %d\n", data->objs.exit);
-	printf("Objs.player = %d\n", data->objs.player);
-	printf("Objs.collect = %d\n", data->objs.coll);
-	printf("Player position X = %d\n", data->p_pos.x);
-	printf("Player position Y = %d\n", data->p_pos.y);
-}
-
 int	main(int argc, char **argv, char **envp)
 {
 	t_program	game;
