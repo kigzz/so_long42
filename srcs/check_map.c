@@ -32,6 +32,12 @@ static int	check_walls(t_program game)
 			return (1);
 		i++;
 	}
+	i = -1;
+	while (game.map_save[++i])
+	{
+		if (ft_strlen(game.map_save[i]) != len)
+			return (1);
+	}
 	return (0);
 }
 
