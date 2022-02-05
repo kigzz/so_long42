@@ -29,7 +29,12 @@ int	main(int argc, char **argv, char **envp)
 		return (1);
 	}
 	game_init(&game);
-	open_image(&game);
+	if (open_image(&game) == 1)
+	{
+		mlx_destroy_window(game.mlx_ptr, game.window);
+		free_game(&game);
+		return (1);
+	}
 	map_draw(&game);
 	mlx_hook(game.window, 17, 1L << 5, &close_redcross, &game);
 	mlx_hook(game.window, 2, 1L << 0, &key_pressed, &game);
