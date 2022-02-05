@@ -12,6 +12,13 @@
 
 #include "so_long_bonus.h"
 
+void	gameplay(t_program *game)
+{
+	mlx_hook(game->window, 17, 1L << 5, &close_redcross, game);
+	mlx_hook(game->window, 2, 1L << 0, &key_pressed, game);
+	mlx_loop((*game).mlx_ptr);
+}
+
 int	main(int argc, char **argv, char **envp)
 {
 	t_program	game;
@@ -36,9 +43,7 @@ int	main(int argc, char **argv, char **envp)
 		return (1);
 	}
 	map_draw(&game);
-	mlx_hook(game.window, 17, 1L << 5, &close_redcross, &game);
-	mlx_hook(game.window, 2, 1L << 0, &key_pressed, &game);
-	mlx_loop(game.mlx_ptr);
+	gameplay(&game);
 	free_game(&game);
 	return (0);
 }
