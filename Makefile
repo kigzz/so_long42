@@ -4,7 +4,7 @@
 NAME			=	so_long
 NAME_BONUS		=	so_long_bonus
 CC				=	gcc
-FLAGS			=	-Wall -Wextra -Werror -Iincludes -Ilibft -Imlx_linux -O3
+FLAGS			=	-Wall -Wextra -Werror -Iincludes -Ilibft -Imlx_linux -O3 -g3 -fsanitize=address
 #-g3 -fsanitize=address
 
 RM				=	rm -rf

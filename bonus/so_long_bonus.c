@@ -45,6 +45,5 @@ int	main(int argc, char **argv, char **envp)
 	}
 	map_draw(&game);
 	gameplay(&game);
-	free_game(&game);
 	return (0);
 }
