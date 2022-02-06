@@ -17,7 +17,7 @@ void	show_moves_count(t_program *game)
 	char	*str;
 
 	str = ft_itoa(game->moves);
-//	mlx_string_put(game->mlx_ptr, game->window, 0,
-//		20, 0xFF0000, str);
+	mlx_string_put(game->mlx_ptr, game->window, 20,
+		20, 0xFF0000, str);
 	free(str);
 }

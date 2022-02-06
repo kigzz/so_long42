@@ -16,7 +16,8 @@ void	exit_loop(t_program *game)
 {
 	mlx_destroy_window(game->mlx_ptr, game->window);
 	game->window = NULL;
-	mlx_loop_end(game->mlx_ptr);
+	free_game(game);
+	exit(1);
 }
 
 int	key_pressed(int keysym, t_program *game)
