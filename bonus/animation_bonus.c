@@ -41,8 +41,8 @@ int	animation(t_program *game)
 		animation_utils(game, "images/EN4.xpm");
 		game->enemy = 0;
 	}
-	usleep(1750);
 	map_draw(game);
+	usleep(2050);
 	game->enemy += 1;
 	return (0);
 }
