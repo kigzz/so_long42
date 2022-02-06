@@ -82,7 +82,7 @@ int		check_map(t_program *game);
 
 int		map_draw(t_program *game);
 int		open_image(t_program *game);
-int		game_init(t_program *game);
+void	game_init(t_program *game);
 void	exit_loop(t_program *game);
 void	show_moves_count(t_program *game);
 int		animation(t_program *game);
