@@ -23,13 +23,13 @@ int	key_pressed(int keysym, t_program *game)
 {
 	if (keysym == KEY_ESC)
 		exit_loop(game);
-	else if (keysym == KEY_W)
+	else if (keysym == KEY_W || keysym == KEY_UP)
 		player_w(game);
-	else if (keysym == KEY_S)
+	else if (keysym == KEY_S || keysym == KEY_DOWN)
 		player_s(game);
-	else if (keysym == KEY_A)
+	else if (keysym == KEY_A || keysym == KEY_LEFT)
 		player_a(game);
-	else if (keysym == KEY_D)
+	else if (keysym == KEY_D || keysym == KEY_RIGHT)
 		player_d(game);
 	return (0);
 }

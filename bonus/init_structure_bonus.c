@@ -31,9 +31,11 @@ void	init_structure(t_program *game)
 	game->objs.player = 0;
 	game->p_pos.x = 0;
 	game->p_pos.y = 0;
-	game->endloop = 0;
+	game->enemy = 0;
 	game->moves = 0;
 	game->map_height = count_line(game->map_save);
 	game->window_h = 0;
 	game->window_w = 0;
+	game->loop = 0;
+	game->endloop = 0;
 }

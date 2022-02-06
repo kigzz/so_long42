@@ -129,6 +129,30 @@ so_long/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/build
 .PHONY : so_long/fast
 
+bonus/animation_bonus.o: bonus/animation_bonus.c.o
+.PHONY : bonus/animation_bonus.o
+
+# target to build an object file
+bonus/animation_bonus.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/bonus/animation_bonus.c.o
+.PHONY : bonus/animation_bonus.c.o
+
+bonus/animation_bonus.i: bonus/animation_bonus.c.i
+.PHONY : bonus/animation_bonus.i
+
+# target to preprocess a source file
+bonus/animation_bonus.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/bonus/animation_bonus.c.i
+.PHONY : bonus/animation_bonus.c.i
+
+bonus/animation_bonus.s: bonus/animation_bonus.c.s
+.PHONY : bonus/animation_bonus.s
+
+# target to generate assembly for a file
+bonus/animation_bonus.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/bonus/animation_bonus.c.s
+.PHONY : bonus/animation_bonus.c.s
+
 srcs/check_extension.o: srcs/check_extension.c.o
 .PHONY : srcs/check_extension.o
 
@@ -426,6 +450,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... so_long"
+	@echo "... bonus/animation_bonus.o"
+	@echo "... bonus/animation_bonus.i"
+	@echo "... bonus/animation_bonus.s"
 	@echo "... srcs/check_extension.o"
 	@echo "... srcs/check_extension.i"
 	@echo "... srcs/check_extension.s"

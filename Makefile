@@ -36,7 +36,7 @@ OBJ_SRCS    	=	$(SRCS_PATH:%.c=%.o)
 
 SRCS_BONUS		=	check_extension_bonus.c check_map_bonus.c ft_free_bonus.c game_init_bonus.c hook_functions_bonus.c \
 					init_structure_bonus.c map_draw_bonus.c open_image_bonus.c player_movement_bonus.c \
-					show_moves_bonus.c so_long_bonus.c store_map_bonus.c
+					show_moves_bonus.c so_long_bonus.c store_map_bonus.c animation_bonus.c
 SRCS_BONUS_DIR	=	bonus/
 SRCS_BONUS_PATH	=	$(addprefix $(SRCS_BONUS_DIR), $(SRCS_BONUS))
 OBJ_SRCS_BONUS	=	$(SRCS_BONUS_PATH:%.c=%.o)

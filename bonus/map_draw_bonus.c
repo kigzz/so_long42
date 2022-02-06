@@ -18,7 +18,7 @@ static void	img_draw(t_program *game, void *image, int i, int j)
 		i * IMG_PIX);
 }
 
-void	map_draw(t_program *game)
+int	map_draw(t_program *game)
 {
 	int	i;
 	int	j;
@@ -39,6 +39,9 @@ void	map_draw(t_program *game)
 				img_draw(game, game->img_ground, i, j);
 			else if (game->map_save[i][j] == 'E')
 				img_draw(game, game->img_exit, i, j);
+			else if (game->map_save[i][j] == 'Z')
+				img_draw(game, game->img_enemy, i, j);
 		}
 	}
+	return (0);
 }

@@ -24,8 +24,11 @@ int	open_image(t_program *game)
 		(game->mlx_ptr, "images/0.xpm", &game->img_w, &game->img_h);
 	game->img_player = mlx_xpm_file_to_image
 		(game->mlx_ptr, "images/character.xpm", &game->img_w, &game->img_h);
+	game->img_enemy = mlx_xpm_file_to_image
+			(game->mlx_ptr, "images/EN1.xpm", &game->img_w, &game->img_h);
+
 	if (!game->img_player || !game->img_ground || !game->img_col
-		|| !game->img_exit || !game->img_walls)
+		|| !game->img_exit || !game->img_walls || !game->img_enemy)
 		return (1);
 	return (0);
 }

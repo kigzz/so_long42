@@ -37,6 +37,8 @@ void	free_game(t_program *game)
 		mlx_destroy_image(game->mlx_ptr, game->img_exit);
 	if (game->img_player)
 		mlx_destroy_image(game->mlx_ptr, game->img_player);
+	if (game->img_enemy)
+		mlx_destroy_image(game->mlx_ptr, game->img_enemy);
 	mlx_destroy_display(game->mlx_ptr);
 	free(game->mlx_ptr);
 }

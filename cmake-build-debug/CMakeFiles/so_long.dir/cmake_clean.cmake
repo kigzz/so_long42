@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/so_long.dir/bonus/animation_bonus.c.o"
+  "CMakeFiles/so_long.dir/bonus/animation_bonus.c.o.d"
   "CMakeFiles/so_long.dir/srcs/check_extension.c.o"
   "CMakeFiles/so_long.dir/srcs/check_extension.c.o.d"
   "CMakeFiles/so_long.dir/srcs/check_map.c.o"

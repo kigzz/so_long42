@@ -29,6 +29,10 @@
 # define KEY_S 115
 # define KEY_A 97
 # define KEY_D 100
+# define KEY_UP 65362
+# define KEY_LEFT 65361
+# define KEY_DOWN 65364
+# define KEY_RIGHT 65363
 
 typedef struct s_vect
 {
@@ -54,12 +58,15 @@ typedef struct s_program
 	void	*img_exit;
 	void	*img_col;
 	void	*img_ground;
+	void	*img_enemy;
 	int		img_w;
 	int		img_h;
 	int		window_w;
 	int		window_h;
 	int		moves;
-	int		endloop;
+	int		loop;
+	int 	endloop;
+	int 	enemy;
 	t_obj	objs;
 	t_vect	p_pos;
 }	t_program;
@@ -73,11 +80,12 @@ int		check_map(t_program *game);
 
 /* Game */
 
-void	map_draw(t_program *game);
+int		map_draw(t_program *game);
 int		open_image(t_program *game);
 int		game_init(t_program *game);
 void	exit_loop(t_program *game);
 void	show_moves_count(t_program *game);
+int		animation(t_program *game);
 
 /* Player movements */
 

@@ -68,7 +68,7 @@ static int	check_parameters(t_program game)
 		{
 			if (game.map_save[i][j] == 'P' || game.map_save[i][j] == '1' ||
 				game.map_save[i][j] == '0' || game.map_save[i][j] == 'C' ||
-				game.map_save[i][j] == 'E')
+				game.map_save[i][j] == 'E' || game.map_save[i][j] == 'Z')
 				j++;
 			else
 				return (1);

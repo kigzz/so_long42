@@ -16,7 +16,8 @@ void	gameplay(t_program *game)
 {
 	mlx_hook(game->window, 17, 1L << 5, &close_redcross, game);
 	mlx_hook(game->window, 2, 1L << 0, &key_pressed, game);
-	mlx_loop((*game).mlx_ptr);
+	mlx_loop_hook(game->mlx_ptr, &animation, game);
+	mlx_loop(game->mlx_ptr);
 }
 
 int	main(int argc, char **argv, char **envp)

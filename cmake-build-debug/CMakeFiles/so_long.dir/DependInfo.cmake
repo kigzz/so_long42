@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/bpouchep/CLionProjects/so_long42/bonus/animation_bonus.c" "CMakeFiles/so_long.dir/bonus/animation_bonus.c.o" "gcc" "CMakeFiles/so_long.dir/bonus/animation_bonus.c.o.d"
   "/home/bpouchep/CLionProjects/so_long42/srcs/check_extension.c" "CMakeFiles/so_long.dir/srcs/check_extension.c.o" "gcc" "CMakeFiles/so_long.dir/srcs/check_extension.c.o.d"
   "/home/bpouchep/CLionProjects/so_long42/srcs/check_map.c" "CMakeFiles/so_long.dir/srcs/check_map.c.o" "gcc" "CMakeFiles/so_long.dir/srcs/check_map.c.o.d"
   "/home/bpouchep/CLionProjects/so_long42/srcs/ft_free.c" "CMakeFiles/so_long.dir/srcs/ft_free.c.o" "gcc" "CMakeFiles/so_long.dir/srcs/ft_free.c.o.d"

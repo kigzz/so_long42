@@ -21,6 +21,7 @@ int	player_w(t_program *game)
 	else if (game->map_save[game->p_pos.x - 1][game->p_pos.y] == 'E'
 			&& game->objs.coll == 0)
 	{
+		game->endloop = 1;
 		exit_loop(game);
 		return (0);
 	}
@@ -45,6 +46,7 @@ int	player_s(t_program *game)
 	else if (game->map_save[game->p_pos.x + 1][game->p_pos.y] == 'E'
 			&& game->objs.coll == 0)
 	{
+		game->endloop = 1;
 		exit_loop(game);
 		return (0);
 	}
@@ -69,6 +71,7 @@ int	player_a(t_program *game)
 	else if (game->map_save[game->p_pos.x][game->p_pos.y - 1] == 'E'
 			&& game->objs.coll == 0)
 	{
+		game->endloop = 1;
 		exit_loop(game);
 		return (0);
 	}
@@ -93,6 +96,7 @@ int	player_d(t_program *game)
 	else if (game->map_save[game->p_pos.x][game->p_pos.y + 1] == 'E'
 		&& game->objs.coll == 0)
 	{
+		game->endloop = 1;
 		exit_loop(game);
 		return (0);
 	}
