@@ -17,6 +17,13 @@ static void	animation_utils(t_program *game, char *path)
 	mlx_destroy_image(game->mlx_ptr, game->img_enemy);
 	game->img_enemy = mlx_xpm_file_to_image
 		(game->mlx_ptr, path, &game->img_w, &game->img_h);
+	if (!game->img_enemy)
+	{
+		mlx_destroy_window(game->mlx_ptr, game->window);
+		free_game(game);
+		ft_putstr_fd("Error\nOpening images failed", 2);
+		exit(1);
+	}
 }
 
 int	animation(t_program *game)
@@ -34,7 +41,8 @@ int	animation(t_program *game)
 		animation_utils(game, "images/EN4.xpm");
 		game->enemy = 0;
 	}
+	usleep(1750);
 	map_draw(game);
-	game->enemy++;
+	game->enemy += 1;
 	return (0);
 }
