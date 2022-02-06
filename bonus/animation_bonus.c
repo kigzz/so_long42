@@ -5,7 +5,7 @@ int	animation(t_program *game)
 	if (game->endloop == 1)
 		return (0);
 
-//	show_moves_count(game);
+	show_moves_count(game);
 	if (game->enemy == 1)
 	{
 		mlx_destroy_image(game->mlx_ptr, game->img_enemy);

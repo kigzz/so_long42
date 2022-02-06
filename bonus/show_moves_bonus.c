@@ -18,6 +18,8 @@ void	show_moves_count(t_program *game)
 
 	str = ft_itoa(game->moves);
 	mlx_string_put(game->mlx_ptr, game->window, 20,
-		20, 0xFF0000, str);
+		game->map_height * IMG_PIX + 20, 0xFFFFFF, "MOVES: ");
+	mlx_string_put(game->mlx_ptr, game->window, 65,
+		game->map_height * IMG_PIX + 20, 0xFFFFFF, str);
 	free(str);
 }

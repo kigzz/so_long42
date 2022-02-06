@@ -27,6 +27,8 @@ int	player_w(t_program *game)
 	}
 	else if (game->map_save[game->p_pos.x - 1][game->p_pos.y] == 'C')
 		game->objs.coll -= 1;
+	else if (game->map_save[game->p_pos.x - 1][game->p_pos.y] == 'Z')
+		exit_loop(game);
 	mlx_clear_window(game->mlx_ptr, game->window);
 	game->map_save[game->p_pos.x][game->p_pos.y] = '0';
 	game->map_save[game->p_pos.x - 1][game->p_pos.y] = 'P';
@@ -52,6 +54,8 @@ int	player_s(t_program *game)
 	}
 	else if (game->map_save[game->p_pos.x + 1][game->p_pos.y] == 'C')
 		game->objs.coll -= 1;
+	else if (game->map_save[game->p_pos.x + 1][game->p_pos.y] == 'Z')
+		exit_loop(game);
 	mlx_clear_window(game->mlx_ptr, game->window);
 	game->map_save[game->p_pos.x][game->p_pos.y] = '0';
 	game->map_save[game->p_pos.x + 1][game->p_pos.y] = 'P';
@@ -77,6 +81,8 @@ int	player_a(t_program *game)
 	}
 	else if (game->map_save[game->p_pos.x][game->p_pos.y - 1] == 'C')
 		game->objs.coll -= 1;
+	else if (game->map_save[game->p_pos.x][game->p_pos.y - 1] == 'Z')
+		exit_loop(game);
 	mlx_clear_window(game->mlx_ptr, game->window);
 	game->map_save[game->p_pos.x][game->p_pos.y] = '0';
 	game->map_save[game->p_pos.x][game->p_pos.y - 1] = 'P';
@@ -102,6 +108,8 @@ int	player_d(t_program *game)
 	}
 	if (game->map_save[game->p_pos.x][game->p_pos.y + 1] == 'C')
 		game->objs.coll -= 1;
+	else if (game->map_save[game->p_pos.x][game->p_pos.y + 1] == 'Z')
+		exit_loop(game);
 	mlx_clear_window(game->mlx_ptr, game->window);
 	game->map_save[game->p_pos.x][game->p_pos.y] = '0';
 	game->map_save[game->p_pos.x][game->p_pos.y + 1] = 'P';
