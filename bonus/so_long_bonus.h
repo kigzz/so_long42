@@ -64,7 +64,6 @@ typedef struct s_program
 	int		window_w;
 	int		window_h;
 	int		moves;
-	int		loop;
 	int		endloop;
 	int		enemy;
 	t_obj	objs;
