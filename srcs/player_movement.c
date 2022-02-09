@@ -22,6 +22,8 @@ int	player_w(t_program *game)
 			&& game->objs.coll == 0)
 	{
 		exit_loop(game);
+		game->moves += 1;
+		show_moves_count(game);
 		ft_putstr_fd("Gg wp :)\n", 1);
 		return (0);
 	}
@@ -46,6 +48,8 @@ int	player_s(t_program *game)
 			&& game->objs.coll == 0)
 	{
 		exit_loop(game);
+		game->moves += 1;
+		show_moves_count(game);
 		ft_putstr_fd("Gg wp :)\n", 1);
 		return (0);
 	}
@@ -70,6 +74,8 @@ int	player_a(t_program *game)
 			&& game->objs.coll == 0)
 	{
 		exit_loop(game);
+		game->moves += 1;
+		show_moves_count(game);
 		ft_putstr_fd("Gg wp :)\n", 1);
 		return (0);
 	}
@@ -94,6 +100,8 @@ int	player_d(t_program *game)
 		&& game->objs.coll == 0)
 	{
 		exit_loop(game);
+		game->moves += 1;
+		show_moves_count(game);
 		ft_putstr_fd("Gg wp :)\n", 1);
 		return (0);
 	}

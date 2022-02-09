@@ -4,7 +4,7 @@
 NAME			=	so_long
 NAME_BONUS		=	so_long_bonus
 CC				=	gcc
-FLAGS			=	-Wall -Wextra -Werror -Iincludes -Ilibft -Imlx_linux -O3 -g3 -fsanitize=address
+FLAGS			=	-Wall -Wextra -Werror -Iincludes -Ilibft -Iminilibx-linux -O3 -g3 -fsanitize=address
 #-g3 -fsanitize=address
 
 RM				=	rm -rf
@@ -15,12 +15,12 @@ LIBFT_NAME		=	libft.a
 LIBFT_DIR		=	libft
 
 MLX_NAME		=	libmlx_linux.a
-MLX_DIR			=	mlx_linux
+MLX_DIR			=	minilibx-linux
 
 #LIB FLAGS
 
-MLX				=	mlx_linux
-MLX_LINUX_FLAGS	=	-Lmlx_linux -lmlx_Linux -lXext -lX11
+MLX				=	minilibx-linux
+MLX_LINUX_FLAGS	=	-Lminilibx-linux -lXext -lX11
 LIBFT_FLAGS		=	-Llibft -lft
 
 
