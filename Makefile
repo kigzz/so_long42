@@ -20,7 +20,7 @@ MLX_DIR			=	minilibx-linux
 #LIB FLAGS
 
 MLX				=	minilibx-linux
-MLX_LINUX_FLAGS	=	-Lminilibx-linux -lXext -lX11
+MLX_LINUX_FLAGS	=	-Lminilibx-linux -lmlx_Linux -lXext -lX11
 LIBFT_FLAGS		=	-Llibft -lft
 
 
